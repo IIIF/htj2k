@@ -1,2 +1,2 @@
-# jp2hk
-A project to evaluate jp2hk for IIIF
+# htj2k
+A project to evaluate htj2k for IIIF
