@@ -5,4 +5,4 @@
 
 # you can pass in a glob parameter and a directory as a output filename to process multiple files
 
-vips tiffsave $1 /tmp/gml_00135201.tif --vips-progress --compression lzw --Q 90 --bigtiff --tile --pyramid --tile-width 256 --tile-height 256
+vips tiffsave $1 /tmp/gml_00135201.tif --vips-progress --compression jpeg --Q 90 --bigtiff --tile --pyramid --tile-width 256 --tile-height 256
