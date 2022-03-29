@@ -10,6 +10,8 @@ if [[ ( -z "${1}" ) || ( -z "${2}" ) || ( "${3}" != "ptiff" && "${3}" != "jp2" &
     exit 1
 fi
 
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 in_ptn=$1
 out_base_path=$2
 format=$3
@@ -23,13 +25,13 @@ for in_path in $in_ptn; do
 
     if [ "${format}" = "ptiff" ]; then
         out_path="${out_base_path}/${in_fname%.*}.tif"
-        cmd="./imgconv_ptiff.py ${in_path} ${out_path}"
+        cmd="$SCRIPT_DIR/tiff_to_ptiff.sh ${in_path} ${out_path}"
     elif [ "${format}" = "jp2" ]; then
         out_path="${out_base_path}/${in_fname%.*}.jp2"
-        cmd="./tiff_to_jp2.sh ${in_path} ${out_path}"
+        cmd="$SCRIPT_DIR/tiff_to_jp2.sh ${in_path} ${out_path}"
     elif [ "${format}" = "htj2k" ]; then
         out_path="${out_base_path}/${in_fname%.*}.htj2k.jp2"
-        cmd="./tiff_to_htj2k.sh ${in_path} ${out_path}"
+        cmd="$SCRIPT_DIR/tiff_to_htj2k.sh ${in_path} ${out_path}"
     fi
 
     $cmd
