@@ -39,15 +39,6 @@ RUN mkdir -p /var/www/iipsrv/cgi-bin/
 RUN cp src/iipsrv.fcgi /var/www/iipsrv/cgi-bin/
 COPY supervisord.conf /etc/
 
-# Build multiwatch.
-WORKDIR ${_workroot}
-RUN git clone --depth=1 https://github.com/lighttpd/multiwatch.git
-WORKDIR ${_workroot}/multiwatch
-RUN ./autogen.sh
-RUN ./configure
-RUN make
-RUN cp multiwatch /usr/local/bin
-
 # Clean up build packages
 RUN apk del devtools
 
