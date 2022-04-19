@@ -1,3 +1,6 @@
+# to prevent Kakadu source distribution zip from being commited to GIT
+*.zip
+
 # Byte-compiled / optimized / DLL files
 imgs
 .DS_Store
