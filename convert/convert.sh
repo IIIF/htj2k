@@ -2,7 +2,7 @@
 
 set -u
 #set -e
-set -x
+#set -x
 
 if [[ ( -z "${1}" ) || ( -z "${2}" ) || ( "${3}" != "ptiff_lossy" && "${3}" != "ptiff_lossless" && "${3}" != "j2k1_lossy" && "${3}" != "j2k1_lossless" && "${3}" != "htj2k_lossy" && "${3}" != "htj2k_lossless") ]]; then
     echo -e "Usage: ${0} <source> <base output path> <output format> <logs_directory>\n"\
@@ -22,26 +22,37 @@ format=$3
 logs_directory=$4
 echo "Input pattern: ${in_ptn}"
 
-number_of_encode_cycle_iterations=5
+number_of_encode_cycle_iterations=10
 
 # setup log files
 date_for_filename=`date +"%Y-%m-%d-%H-%M-%S_%N"`
 log_filename="$logs_directory/$format.${date_for_filename}.log.txt" 
 
 # write header to log file
-printf "in_ptn,format,encode_time_seconds,bytes_in_compressed_folder\n" > $log_filename
+printf "input_filepath,input_filename,width,height,format," > $log_filename
+for encoding_cycle_iteration in $(seq 1 $number_of_encode_cycle_iterations); do
+    printf "encode_time_in_seconds_iteration_%d," $encoding_cycle_iteration >> $log_filename 
+done
+printf "encode_time_in_seconds_average,compressed_size_in_bytes\n" >> $log_filename
 
-# start timer
-start_job_time=`date +%s%N`
-
-for in_path in $in_ptn/*.tif; do
+for in_path in $in_ptn/*.{tif,TIF}; do
     echo "input image: ${in_path}"
     in_fname=$(basename $in_path)
 
     echo "Converting $in_fname to $format format..."
+    width=$(vipsheader -f Xsize $in_path)
+    height=$(vipsheader -f Ysize $in_path)
 
+    # add initial log entries
+    printf "%s,%s,%s,%s,%s," $in_path $in_fname $width $height $format >> $log_filename
+
+    # start timer
+    let duration_all_iterations_nanoseconds=0
     for encoding_cycle_iteration in $(seq 1 $number_of_encode_cycle_iterations)
     do
+        # start timer
+        start_iteration_time=`date +%s%N`    
+
         if [ "${format}" = "ptiff_lossy" ]; then
             out_path="${out_base_path}/${in_fname%.*}.tif"
             cmd="$SCRIPT_DIR/tiff_to_ptiff_lossy_jpeg_Q90.sh ${in_path} ${out_path}"
@@ -68,7 +79,30 @@ for in_path in $in_ptn/*.tif; do
 
         fi
 
+        end_iteration_time=`date +%s%N` 
+
+        # compute timing stats for the encoding iteration
+        let duration_iteration_nanoseconds=$end_iteration_time-$start_iteration_time
+        number_of_nanoseconds_in_one_second=1000000000
+        duration_iteration_total_seconds=$(echo "scale=5;$duration_iteration_nanoseconds/$number_of_nanoseconds_in_one_second" | bc)
+
+        # print timing of iteration to file
+        printf "%s," $duration_iteration_total_seconds >> $log_filename
+
+        duration_all_iterations_nanoseconds=$(($duration_all_iterations_nanoseconds+$duration_iteration_nanoseconds))
     done
+    
+    # compute timing stats for the sequence
+    number_of_nanoseconds_in_one_second=1000000000
+    encode_time_per_iteration_seconds=$(echo "scale=5;($duration_all_iterations_nanoseconds/$number_of_encode_cycle_iterations)/$number_of_nanoseconds_in_one_second" | bc)
+
+    # print timing of iteration to file
+    printf "%s," $encode_time_per_iteration_seconds >> $log_filename
+
+    # get filesize and print to file
+    compressed_file_bytes=$(du -sb ${out_path} | cut -f1) 
+    printf "compressed_file_bytes = %s\n" $compressed_file_bytes 
+    printf "%s\n" $compressed_file_bytes >> $log_filename
 
     $cmd
 
@@ -76,25 +110,25 @@ for in_path in $in_ptn/*.tif; do
     echo
 done
 
-end_job_time=`date +%s%N`
+
   
 # compute timing stats for the sequence
-let duration_job_nanoseconds=$end_job_time-$start_job_time
-number_of_nanoseconds_in_one_second=1000000000
-duration_job_total_seconds=$(echo "scale=5;$duration_job_nanoseconds/$number_of_nanoseconds_in_one_second" | bc)
-encode_time_per_iteration_seconds=$(echo "scale=5;($duration_job_nanoseconds/$number_of_encode_cycle_iterations)/$number_of_nanoseconds_in_one_second" | bc)
+#let duration_job_nanoseconds=$end_job_time-$start_job_time
+#number_of_nanoseconds_in_one_second=1000000000
+#duration_job_total_seconds=$(echo "scale=5;$duration_job_nanoseconds/$number_of_nanoseconds_in_one_second" | bc)
+#encode_time_per_iteration_seconds=$(echo "scale=5;($duration_job_nanoseconds/$number_of_encode_cycle_iterations)/$number_of_nanoseconds_in_one_second" | bc)
   
 # get number of bytes for the folder of compressed files
-executing_directory=$(pwd)
-cd $out_base_path
-bytes_in_compressed_folder_with_dot_dir=`du -sb | awk '{print $1}'`
+#executing_directory=$(pwd)
+#cd $out_base_path
+#bytes_in_compressed_folder_with_dot_dir=`du -sb | awk '{print $1}'`
 # subtract 4096 for the '.' dir
-let bytes_in_compressed_folder=$bytes_in_compressed_folder_with_dot_dir-4096 
-cd $executing_directory
+##let bytes_in_compressed_folder=$bytes_in_compressed_folder_with_dot_dir-4096 
+#cd $executing_directory
   
 # print results to screen
-printf "%s %s %s seconds %s bytes\n" $in_ptn ${format} $encode_time_per_iteration_seconds $bytes_in_compressed_folder
+##printf "%s %s %s seconds %s bytes\n" $in_ptn ${format} $encode_time_per_iteration_seconds $bytes_in_compressed_folder
 
 # add timing info to log
 
-printf "%s,%s,%s,%s\n" $in_ptn ${format} $encode_time_per_iteration_seconds $bytes_in_compressed_folder >> $log_filename
+#printf "%s,%s,%s,%s\n" $in_ptn ${format} $encode_time_per_iteration_seconds $bytes_in_compressed_folder >> $log_filename
