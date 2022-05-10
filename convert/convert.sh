@@ -79,6 +79,9 @@ for in_path in $in_ptn/*.{tif,TIF}; do
 
         fi
 
+        # do the encoding for this iteration
+        $cmd
+
         end_iteration_time=`date +%s%N` 
 
         # compute timing stats for the encoding iteration
@@ -103,8 +106,6 @@ for in_path in $in_ptn/*.{tif,TIF}; do
     compressed_file_bytes=$(du -sb ${out_path} | cut -f1) 
     printf "compressed_file_bytes = %s\n" $compressed_file_bytes 
     printf "%s\n" $compressed_file_bytes >> $log_filename
-
-    $cmd
 
     echo "...Done."
     echo
