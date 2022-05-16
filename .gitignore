@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 
 *.swp
+
+# Kakadu proprietary sources.
+ext/kakadu
