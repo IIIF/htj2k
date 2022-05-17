@@ -131,4 +131,4 @@ dmypy.json
 *.swp
 
 # Kakadu proprietary sources.
-ext/kakadu
+image_server/kakadu
