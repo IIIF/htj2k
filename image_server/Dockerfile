@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM ubuntu:latest
 
 # Working source root.
 ENV _workroot /usr/local/src
@@ -7,21 +7,20 @@ ENV _iipsrv_version 1.1
 # iipsrv commit to use (for trunk build).
 ENV _iipsrv_commit efcf57fbd1b31509e2f4a3393aa8c35887eef9f3
 
-RUN apk add --no-cache -t devtools autoconf automake libtool git
-RUN apk add --no-cache build-base glib-dev bash openjpeg libjpeg-turbo-dev \
-    tiff-dev libpng-dev fcgi-dev libevent libevent-dev ca-certificates nginx
+RUN apt update
+RUN apt install -y git autoconf automake libtool pkg-config
+RUN apt install -y build-essential libopenjp2-7-dev libopenjp2-tools \
+    libjpeg-turbo8-dev libtiff-dev libfcgi-dev nginx
 
 # Copy and compile Kakadu codec.
 WORKDIR ${_workroot}
 COPY kakadu ./kakadu
-WORKDIR ${_workroot}/kakadu/coresys/make
-RUN make -f Makefile-Linux-x86-64-gcc
-WORKDIR ${_workroot}/kakadu/apps/make
-RUN make -f Makefile-Linux-x86-64-gcc
-WORKDIR ${_workroot}/kakadu/lib
-RUN cp * /usr/local/lib
-WORKDIR ${_workroot}/kakadu/bin
-RUN cp * /usr/local/bin
+WORKDIR ${_workroot}/kakadu/make
+RUN make -f Makefile-Linux-x86-64-gcc all_but_jni
+WORKDIR ${_workroot}/kakadu
+RUN cp -r apps coresys managed /usr/local/lib
+RUN cp lib/Linux-x86-64-gcc/* /usr/local/lib
+RUN cp bin/Linux-x86-64-gcc/* /usr/local/bin
 
 # Build iipsrv.
 WORKDIR ${_workroot}
@@ -45,19 +44,21 @@ WORKDIR iipsrv
 RUN ./autogen.sh
 # Compile for OpenJPEG support. According to configure doc, OpenJPEG and Kakadu
 # exclude each other.
-RUN ./configure --prefix=/usr/local/iipsrv_openjpeg --with-openjpeg=/usr/lib
+RUN ./configure --prefix=/usr/local/iipsrv_openjpeg
 RUN make
 RUN make install
+RUN ls -l *
+RUN mkdir -p /var/www/iipsrv/cgi-bin/
+RUN cp src/iipsrv.fcgi /var/www/iipsrv/cgi-bin/iipsrv_openjpeg.fcgi
 
 # Compile again for Kakadu support.
+ENV PATH $PATH:/usr/local/lib:/usr/local/bin
+ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/lib
 RUN make clean
 RUN ./configure --prefix=/usr/local/iipsrv_kakadu --with-kakadu=/usr/local/lib
 RUN make
 RUN make install
-
-WORKDIR /var/www/iipsrv/cgi-bin
-RUN cp /usr/local/iipsrv_openjpeg/src/iipsrv/src/iipsrv.fcgi ./iipsrv_openjpeg.fcgi
-RUN cp /usr/local/iipsrv_kakadu/src/iipsrv/src/iipsrv.fcgi ./iipsrv_kakadu.fcgi
+RUN cp src/iipsrv.fcgi /var/www/iipsrv/cgi-bin/iipsrv_kakadu.fcgi
 
 # Create image directory, to be mapped as an external volume.
 WORKDIR /data/images
@@ -66,7 +67,7 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 # Clean up build packages
 WORKDIR /
-RUN apk del devtools
+RUN apt remove -y gcc g++ make autoconf automake libtool pkg-config git
 
 # Clean up source files
 RUN rm -rf ${_workroot}

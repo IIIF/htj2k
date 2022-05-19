@@ -3,21 +3,27 @@
 Build the container:
 
 ```
-docker build -t iipsrv:latest .
+docker build -t iipsrv_htj2k:latest .
 ```
 
-Run it binding the container's default image directory to your host's:
+The container can be run with the OpenJPEG or Kakadu engine. For OpenJPEG,
+binding the container's default image directory to your host's:
 
 ```
-docker run -p 8000:8000 -p 8001:8001 -v ~/images:/data/images iipsrv:latest
+docker run -p 8000:8000 -v ~/images:/data/images iipsrv_htj2k:latest
 ```
 
-Test server:
+For Kakadu:
 
 ```
-curl localhost:<port #>/iiif/<image ID>/info.json
+docker run -e "IIPSRV_ENGINE=kakadu" -p 8000:8000 -v ~/images:/data/images iipsrv_htj2k:latest
 ```
 
-Where `<port #>` is 8000 for the iipsrv instance supporting OpenJPEG, and 8001
-for Kakadu; and `<image ID>` is the path to the image file, relative to the
+Test the server:
+
+```
+curl -i localhost:8000/iiif/<image ID>/info.json
+```
+
+Where `<image ID>` is the path to the image file, relative to the
 directory you mounted in the `run` command.
