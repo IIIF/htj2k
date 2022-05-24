@@ -22,14 +22,14 @@ format=$3
 logs_directory=$4
 echo "Input pattern: ${in_ptn}"
 
-number_of_encode_cycle_iterations=10
+number_of_encode_cycle_iterations=3
 
 # setup log files
 date_for_filename=`date +"%Y-%m-%d-%H-%M-%S_%N"`
 log_filename="$logs_directory/$format.${date_for_filename}.log.txt" 
 
 # write header to log file
-printf "input_filepath,input_filename,width,height,format," > $log_filename
+printf "input_filepath,input_filename,width,height,number_of_components,input_size_in_bytes,format," > $log_filename
 for encoding_cycle_iteration in $(seq 1 $number_of_encode_cycle_iterations); do
     printf "encode_time_in_seconds_iteration_%d," $encoding_cycle_iteration >> $log_filename 
 done
@@ -42,9 +42,11 @@ for in_path in $in_ptn/*.{tif,TIF}; do
     echo "Converting $in_fname to $format format..."
     width=$(vipsheader -f Xsize $in_path)
     height=$(vipsheader -f Ysize $in_path)
+    number_of_components=$(vipsheader -f bands $in_path)
+    uncompressed_file_bytes=$(du -sb ${in_path} | cut -f1) 
 
     # add initial log entries
-    printf "%s,%s,%s,%s,%s," $in_path $in_fname $width $height $format >> $log_filename
+    printf "%s,%s,%s,%s,%s,%s,%s," $in_path $in_fname $width $height $number_of_components $uncompressed_file_bytes $format >> $log_filename
 
     # start timer
     let duration_all_iterations_nanoseconds=0

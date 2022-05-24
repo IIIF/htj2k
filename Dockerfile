@@ -8,6 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y install unzip
 RUN apt-get -y install cmake
 RUN apt-get -y install g++
+RUN apt-get -y install git
 
 # set Kakadu distribution version and unique serial number 
 ARG KDU_SOURCE_NAME=v8_2_1-00462N
@@ -45,11 +46,28 @@ RUN apt-get install -y libvips-tools
 # install bc
 RUN apt-get -y install bc
 
-# Install dependencies:
+# Install python dependencies:
 WORKDIR /usr/src/iiif-htj2k/src
 RUN apt-get -y install python3-pip
 COPY ./src/requirements.txt ./
 RUN pip install -r ./requirements.txt
+
+# install openjpeg
+RUN apt-get -y install libopenjp2-tools
+
+# upgrade cmake
+RUN pip install --upgrade cmake
+# update G++ to version 10
+RUN apt-get -y install build-essential
+RUN apt install -y gcc-10 g++-10 cpp-10
+RUN update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 100 --slave /usr/bin/g++ g++ /usr/bin/g++-10
+# install grok
+WORKDIR /usr/src/
+RUN git clone https://github.com/GrokImageCompression/grok.git
+WORKDIR /usr/src/grok/build
+RUN cmake ..
+RUN make
+RUN make install
 
 # Copy the repo
 WORKDIR /usr/src/iiif-htj2k
