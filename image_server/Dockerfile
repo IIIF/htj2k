@@ -5,12 +5,12 @@ ENV _workroot /usr/local/src
 # iipsrv version to use (for release build).
 ENV _iipsrv_version 1.1
 # iipsrv commit to use (for trunk build).
-ENV _iipsrv_commit efcf57fbd1b31509e2f4a3393aa8c35887eef9f3
+ENV _iipsrv_commit a6fcf4df5f832d5305411e361ff94a59136c8a3d
 
 RUN apt update
 RUN apt install -y git autoconf automake libtool pkg-config
 RUN apt install -y build-essential libopenjp2-7-dev libopenjp2-tools \
-    libjpeg-turbo8-dev libtiff-dev libfcgi-dev nginx
+    libjpeg-turbo8-dev libtiff-dev libwebp-dev libfcgi-dev nginx
 
 # Copy and compile Kakadu codec.
 WORKDIR ${_workroot}
@@ -38,7 +38,7 @@ WORKDIR ${_workroot}
 # BEGIN trunk build
 RUN git clone --depth 1 https://github.com/ruven/iipsrv.git
 WORKDIR iipsrv
-#RUN git checkout -b build ${_iipsrv_commit}
+RUN git checkout -b build ${_iipsrv_commit}
 # END trunk build
 
 RUN ./autogen.sh
