@@ -25,6 +25,7 @@ RUN cp bin/Linux-x86-64-gcc/* /usr/local/bin
 # Build iipsrv.
 WORKDIR ${_workroot}
 
+
 # BEGIN release build
 #ADD https://github.com/ruven/iipsrv/archive/iipsrv-${_iipsrv_version}.tar.gz ./
 #RUN tar xf iipsrv-${_iipsrv_version}.tar.gz
