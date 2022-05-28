@@ -39,7 +39,7 @@ WORKDIR ${_workroot}
 # BEGIN trunk build
 RUN git clone --depth 1 https://github.com/ruven/iipsrv.git
 WORKDIR iipsrv
-RUN git checkout -b build ${_iipsrv_commit}
+#RUN git checkout -b build ${_iipsrv_commit}
 # END trunk build
 
 RUN ./autogen.sh
