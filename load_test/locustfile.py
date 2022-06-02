@@ -1,9 +1,9 @@
 import random
 
-from os import path
+from os import environ, path
 from glob import glob
 
-from locust import HttpUser, TaskSet, between, task
+from locust import HttpUser, SequentialTaskSet, TaskSet, between, task
 
 __doc__ = """
 Locustfile to load-test IIIF implementation.
@@ -18,10 +18,10 @@ in the IIIF server being load-tested.
 """
 
 
-BASEDIR = path.dirname(path.realpath(__file__))
-DATA_DIR = path.join(BASEDIR, 'data')
-# This should guarantee that the ranges are ordered by size.
-IDX_FNAMES = sorted(glob(path.join(DATA_DIR, 'imgmeta_range_*')))
+BASEDIR = path.dirname(path.dirname(path.realpath(__file__)))
+DATAFILE = path.join(BASEDIR, 'data', 'ruven_set.txt')
+DATASET = environ["LOCUST_IMG_DATASET"]
+FMT = environ["LOCUST_IMG_FORMAT"]
 
 # Default source size range. Either a number (0 or greater, indicating the
 # range number) or ``None``, in which case a random range is chosen each time.
@@ -32,10 +32,10 @@ DEFAULT_SRC_SZ_RNG = None
 # client. Override this with the ``LOCUST_DERV_SZ`` environment variable.
 DEFAULT_DERV_SZ = None
 
-IIIF_URL_PTN = '/iiif/image/{id}/{reg_str}/{size_str}/0/default.jpg'
+IIIF_URL_PTN = f'/iiif/{DATASET}/{{id}}.{FMT}/{{reg_str}}/{{size_str}}/0/default.jpg'
 
 
-class Derivatives(TaskSet):
+class Derivatives(SequentialTaskSet):
     """
     Request different sorts of derivatives for one image source.
 
@@ -43,23 +43,23 @@ class Derivatives(TaskSet):
     full-size, large, random area and thumbnail derivatives.
     """
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.id = random.choice(self.parent.ids)
+    #def __init__(self, *args, **kwargs):
+    #    super().__init__(*args, **kwargs)
+    #    self.id = random.choice(self.parent.ids)
 
     @task(1)
     def deriv_large(self):
         self._request_derivative(4096)
 
-    @task(4)
+    @task(2)
     def deriv_med(self):
         self._request_derivative(1024)
 
-    @task(10)
+    @task(4)
     def deriv_thumb(self):
         self._request_derivative(128)
 
-    @task(10)
+    @task(4)
     def deriv_area(self):
         self._request_derivative(
                 512, (random.randint(0, 1024), random.randint(0, 1024)))
@@ -78,28 +78,24 @@ class Derivatives(TaskSet):
             coordinates, or ``None``. The ``size`` parameter is used for the
             tile size if this parameter is not ``None``.
         """
-        src_list_name = path.splitext(path.basename(self.parent.source))[0]
-        ranges = src_list_name.lstrip('imgmeta_range_').split('-')
-        lrange = ranges[0] or 0
-        hrange = ranges[1] or None
         if region is None:
             reg_str = 'full'
             size_str = size if size == 'full' else f'!{size},{size}'
             # Statistics are grouped by this string.
-            stats_name = (
-                    f'{{lrange: {lrange}, hrange: {hrange}, derv_sz: {size}}}')
+            stats_name = (f'{{derv_sz: {size}}}')
         else:
             reg_str = f'{region[0]},{region[1]},{size},{size}'
             size_str = 'full'
             stats_name = (
-                    f'{{lrange: {lrange}, hrange: {hrange}, derv_sz: "tile"}}')
+                    f'{{derv_sz: "tile"}}')
 
-        url_str = IIIF_URL_PTN.format(
-            id=self.id,
-            reg_str=reg_str,
-            size_str=size_str
-        )
-        self.client.get(url_str, name=stats_name)
+        for id in self.parent.ids:
+            url_str = IIIF_URL_PTN.format(
+                id=id,
+                reg_str=reg_str,
+                size_str=size_str
+            )
+            self.client.get(url_str, name=stats_name)
 
 
 class Sources(TaskSet):
@@ -112,11 +108,10 @@ class Sources(TaskSet):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.source = IDX_FNAMES[random.randint(0, 2)]
-        with open(self.source, 'r') as fh:
+        with open(DATAFILE, 'r') as fh:
             self.ids = fh.read().splitlines()
 
-    tasks = {Derivatives: 10}
+    tasks = {Derivatives: 1}
 
 
 class IIIFSwarmer(HttpUser):
@@ -124,4 +119,4 @@ class IIIFSwarmer(HttpUser):
     Locust class.
     """
     tasks = {Sources: 1}
-    wait_time = between(0.5, 1)
+    wait_time = between(0., .2)
