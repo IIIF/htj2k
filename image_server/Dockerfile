@@ -5,7 +5,7 @@ ENV _workroot /usr/local/src
 # iipsrv version to use (for release build).
 ENV _iipsrv_version 1.1
 # iipsrv commit to use (for trunk build).
-ENV _iipsrv_commit a6fcf4df5f832d5305411e361ff94a59136c8a3d
+ENV _iipsrv_commit 5eb8a3db2a0664cff2df5a642d5fb5a1e3251f3f
 
 RUN apt update
 RUN apt install -y git autoconf automake libtool pkg-config
