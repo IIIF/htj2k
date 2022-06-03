@@ -1,0 +1,3 @@
+Method,Name,Error,Occurrences
+GET,{derv_sz: 4096},502 Server Error: Bad Gateway for url: {derv_sz: 4096},191
+GET,{derv_sz: 1024},502 Server Error: Bad Gateway for url: {derv_sz: 1024},200
