@@ -94,13 +94,13 @@ class Derivatives(SequentialTaskSet):
             size_str = 'full'
             stats_name = f'{{derv_sz: "{reg_type}"}}'
 
-        for id in self.parent.ids:
-            url_str = IIIF_URL_PTN.format(
-                id=id,
-                reg_str=reg_str,
-                size_str=size_str
-            )
-            self.client.get(url_str, name=stats_name)
+        id = random.choice(self.parent.ids)
+        url_str = IIIF_URL_PTN.format(
+            id=id,
+            reg_str=reg_str,
+            size_str=size_str
+        )
+        self.client.get(url_str, name=stats_name)
 
 
 class Sources(TaskSet):
