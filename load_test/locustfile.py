@@ -1,7 +1,6 @@
 import random
 
 from os import environ, path
-from glob import glob
 
 from locust import HttpUser, SequentialTaskSet, TaskSet, between, task
 
@@ -32,7 +31,9 @@ DEFAULT_SRC_SZ_RNG = None
 # client. Override this with the ``LOCUST_DERV_SZ`` environment variable.
 DEFAULT_DERV_SZ = None
 
-IIIF_URL_PTN = f'/iiif/{DATASET}/{{id}}.{FMT}/{{reg_str}}/{{size_str}}/0/default.jpg'
+IIIF_URL_PTN = (
+        f"/iiif/{DATASET}/{{id}}.{FMT}/{{reg_str}}/"
+        f"{{size_str}}/0/default.jpg")
 
 
 class Derivatives(SequentialTaskSet):
@@ -42,11 +43,6 @@ class Derivatives(SequentialTaskSet):
     This class picks ONE image identifier and requests a constant number of
     full-size, large, random area and thumbnail derivatives.
     """
-
-    #def __init__(self, *args, **kwargs):
-    #    super().__init__(*args, **kwargs)
-    #    self.id = random.choice(self.parent.ids)
-
     @task(1)
     def deriv_large(self):
         self._request_derivative(4096)
@@ -60,15 +56,25 @@ class Derivatives(SequentialTaskSet):
         self._request_derivative(128)
 
     @task(4)
-    def deriv_area(self):
+    def deriv_rnd_region(self):
         self._request_derivative(
-                512, (random.randint(0, 1024), random.randint(0, 1024)))
+                512, (random.randint(0, 1024), random.randint(0, 1024)),
+                "rnd_region")
+
+    @task(4)
+    def deriv_aligned_tile(self):
+        # Align random coordinates to a 512*512 grid.
+        x = random.randint(0, 4096 + 512 - 1)
+        x -= x % 512
+        y = random.randint(0, 4096 + 512 - 1)
+        y -= y % 512
+        self._request_derivative(512, (x, y), "tile")
 
     @task(1)
     def stop(self):
         self.interrupt()
 
-    def _request_derivative(self, size, region=None):
+    def _request_derivative(self, size, region=None, reg_type=None):
         """
         Request a IIIF derivative based on size and optional cropped area.
 
@@ -82,12 +88,11 @@ class Derivatives(SequentialTaskSet):
             reg_str = 'full'
             size_str = size if size == 'full' else f'!{size},{size}'
             # Statistics are grouped by this string.
-            stats_name = (f'{{derv_sz: {size}}}')
+            stats_name = f'{{derv_sz: {size}}}'
         else:
             reg_str = f'{region[0]},{region[1]},{size},{size}'
             size_str = 'full'
-            stats_name = (
-                    f'{{derv_sz: "tile"}}')
+            stats_name = f'{{derv_sz: "{reg_type}"}}'
 
         for id in self.parent.ids:
             url_str = IIIF_URL_PTN.format(

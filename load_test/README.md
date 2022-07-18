@@ -19,4 +19,4 @@ in the folder. Both are mandatory.
 
 The test will run over all the individual images requesting full-frame
 derivatives of 256, 1024 and 4096 pixels on the longer side, as well as random
-areas (not tile aligned) of 256x256 pixels.
+areas (not tile aligned) of 512x512 pixels.

@@ -12,4 +12,4 @@ fi
 nohup /var/www/iipsrv/cgi-bin/${IIPSRV_FCGI} --bind 0.0.0.0:9000 &
 
 echo "Starting Nginx."
-/usr/sbin/nginx -g 'daemon off;'
+exec /usr/sbin/nginx -g 'daemon off;'
