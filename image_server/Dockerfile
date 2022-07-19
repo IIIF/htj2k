@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:jammy
 
 # Working source root.
 ENV _workroot /usr/local/src
@@ -37,9 +37,9 @@ WORKDIR ${_workroot}
 # trunk build (after updating _iipsrv_version above, of course).
 
 # BEGIN trunk build
-RUN git clone --depth 1 https://github.com/ruven/iipsrv.git
+RUN git clone https://github.com/ruven/iipsrv.git
 WORKDIR iipsrv
-#RUN git checkout -b build ${_iipsrv_commit}
+RUN git checkout ${_iipsrv_commit}
 # END trunk build
 
 RUN ./autogen.sh
