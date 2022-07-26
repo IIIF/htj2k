@@ -1,12 +1,10 @@
 Method,Name,Error,Occurrences
-GET,{derv_sz: 4096},504 Server Error: Gateway Time-out for url: {derv_sz: 4096},3
-GET,{derv_sz: 4096},502 Server Error: Bad Gateway for url: {derv_sz: 4096},790
-GET,{derv_sz: 1024},502 Server Error: Bad Gateway for url: {derv_sz: 1024},1549
-GET,{derv_sz: 1024},404 Client Error: Not Found for url: {derv_sz: 1024},1
-GET,"{derv_sz: ""tile""}","502 Server Error: Bad Gateway for url: {derv_sz: ""tile""}",1650
-GET,{derv_sz: 1024},504 Server Error: Gateway Time-out for url: {derv_sz: 1024},1
-GET,{derv_sz: 128},502 Server Error: Bad Gateway for url: {derv_sz: 128},2698
-GET,"{derv_sz: ""tile""}","504 Server Error: Gateway Time-out for url: {derv_sz: ""tile""}",2
-GET,{derv_sz: 128},504 Server Error: Gateway Time-out for url: {derv_sz: 128},2
-GET,"{derv_sz: ""tile""}","404 Client Error: Not Found for url: {derv_sz: ""tile""}",7
-GET,{derv_sz: 128},404 Client Error: Not Found for url: {derv_sz: 128},2
+GET,{derv_sz: 4096},504 Server Error: Gateway Time-out for url: {derv_sz: 4096},2
+GET,{derv_sz: 4096},502 Server Error: Bad Gateway for url: {derv_sz: 4096},117
+GET,"{derv_sz: ""rnd_region""}","504 Server Error: Gateway Time-out for url: {derv_sz: ""rnd_region""}",2
+GET,{derv_sz: 1024},502 Server Error: Bad Gateway for url: {derv_sz: 1024},240
+GET,"{derv_sz: ""tile""}","502 Server Error: Bad Gateway for url: {derv_sz: ""tile""}",462
+GET,{derv_sz: 1024},504 Server Error: Gateway Time-out for url: {derv_sz: 1024},2
+GET,{derv_sz: 128},502 Server Error: Bad Gateway for url: {derv_sz: 128},480
+GET,"{derv_sz: ""tile""}","504 Server Error: Gateway Time-out for url: {derv_sz: ""tile""}",1
+GET,"{derv_sz: ""rnd_region""}","502 Server Error: Bad Gateway for url: {derv_sz: ""rnd_region""}",475

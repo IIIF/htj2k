@@ -1,6 +1,6 @@
 Method,Name,Error,Occurrences
-GET,{derv_sz: 4096},504 Server Error: Gateway Time-out for url: {derv_sz: 4096},2
-GET,{derv_sz: 4096},502 Server Error: Bad Gateway for url: {derv_sz: 4096},491
-GET,{derv_sz: 1024},502 Server Error: Bad Gateway for url: {derv_sz: 1024},800
-GET,"{derv_sz: ""tile""}","502 Server Error: Bad Gateway for url: {derv_sz: ""tile""}",200
-GET,{derv_sz: 128},502 Server Error: Bad Gateway for url: {derv_sz: 128},400
+GET,{derv_sz: 4096},502 Server Error: Bad Gateway for url: {derv_sz: 4096},22
+GET,{derv_sz: 1024},502 Server Error: Bad Gateway for url: {derv_sz: 1024},46
+GET,"{derv_sz: ""tile""}","502 Server Error: Bad Gateway for url: {derv_sz: ""tile""}",81
+GET,{derv_sz: 128},502 Server Error: Bad Gateway for url: {derv_sz: 128},92
+GET,"{derv_sz: ""rnd_region""}","502 Server Error: Bad Gateway for url: {derv_sz: ""rnd_region""}",90

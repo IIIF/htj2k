@@ -1,5 +1,1 @@
 Method,Name,Error,Occurrences
-GET,{derv_sz: 4096},404 Client Error: Not Found for url: {derv_sz: 4096},13
-GET,{derv_sz: 1024},404 Client Error: Not Found for url: {derv_sz: 1024},20
-GET,"{derv_sz: ""tile""}","404 Client Error: Not Found for url: {derv_sz: ""tile""}",40
-GET,{derv_sz: 128},404 Client Error: Not Found for url: {derv_sz: 128},40
