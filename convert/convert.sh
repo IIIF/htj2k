@@ -4,7 +4,7 @@ set -u
 #set -e
 #set -x
 
-if [[ "$#" -ne 3 || ( "${3}" != "ptiff_lossy" && "${3}" != "ptiff_lossless" && "${3}" != "j2k1_lossy" && "${3}" != "j2k1_lossless" && "${3}" != "htj2k_lossy" && "${3}" != "htj2k_lossless") ]]; then
+if [[ "$#" -ne 4 || ( "${3}" != "ptiff_lossy" && "${3}" != "ptiff_lossless" && "${3}" != "j2k1_lossy" && "${3}" != "j2k1_lossless" && "${3}" != "htj2k_lossy" && "${3}" != "htj2k_lossless") ]]; then
     echo -e "Usage: ${0} <source> <base output path> <output format> <logs_directory>\n"\
         "Where <source> is the full "\
         "path to the source file(s) (glob patterns and directories are "\
