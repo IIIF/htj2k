@@ -82,7 +82,6 @@ RUN chown -R root:apprun /var/www/iipsrv/cgi-bin/* && chmod 774 /var/www/iipsrv/
 # ---- For split packages, cut here ----
 
 ENV ALLOW_UPSCALING 0
-ENV CORS "*"
 ENV LOGFILE "/dev/stdout"
 ENV URI_MAP "iiif=>IIIF"
 ENV MAX_IMAGE_CACHE_SIZE "0"
