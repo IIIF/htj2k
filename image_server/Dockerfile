@@ -15,7 +15,8 @@ RUN apt install -y build-essential libopenjp2-7-dev libopenjp2-tools \
 
 # Copy and compile Kakadu codec.
 WORKDIR ${_workroot}
-COPY kakadu/v8_2_1-02075E ./kakadu
+COPY kakadu ./kakadu
+#COPY kakadu/v8_2_1-02075E ./kakadu
 WORKDIR ${_workroot}/kakadu/make
 RUN make -f Makefile-Linux-x86-64-gcc clean
 RUN make -f Makefile-Linux-x86-64-gcc all_but_jni
