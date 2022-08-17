@@ -1,4 +1,5 @@
 # to prevent Kakadu source distribution zip from being commited to GIT
+credentials.json
 *.zip
 
 # Byte-compiled / optimized / DLL files

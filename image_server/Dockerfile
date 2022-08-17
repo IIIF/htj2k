@@ -5,7 +5,8 @@ ENV _workroot /usr/local/src
 # iipsrv version to use (for release build).
 ENV _iipsrv_version 1.1
 # iipsrv commit to use (for trunk build).
-ENV _iipsrv_commit f57b41b06ee536b6ff3aba095884107d3ffea139
+ENV _iipsrv_commit 337aa85f46866255c27b835d69e30e562662cc72
+# f57b41b06ee536b6ff3aba095884107d3ffea139
 
 RUN apt update
 RUN apt install -y git autoconf automake libtool pkg-config
@@ -15,7 +16,9 @@ RUN apt install -y build-essential libopenjp2-7-dev libopenjp2-tools \
 # Copy and compile Kakadu codec.
 WORKDIR ${_workroot}
 COPY kakadu ./kakadu
+#COPY kakadu/v8_2_1-02075E ./kakadu
 WORKDIR ${_workroot}/kakadu/make
+RUN make -f Makefile-Linux-x86-64-gcc clean
 RUN make -f Makefile-Linux-x86-64-gcc all_but_jni
 WORKDIR ${_workroot}/kakadu
 RUN cp -r apps coresys managed /usr/local/lib
@@ -80,7 +83,6 @@ RUN chown -R root:apprun /var/www/iipsrv/cgi-bin/* && chmod 774 /var/www/iipsrv/
 # ---- For split packages, cut here ----
 
 ENV ALLOW_UPSCALING 0
-ENV CORS "*"
 ENV LOGFILE "/dev/stdout"
 ENV URI_MAP "iiif=>IIIF"
 ENV MAX_IMAGE_CACHE_SIZE "0"
@@ -89,7 +91,7 @@ ENV FILESYSTEM_PREFIX "/data/images/"
 ENV INTERPOLATION 1
 ENV JPEG_QUALITY 90
 ENV MAX_CVT 30000
-ENV VERBOSITY 1
+ENV VERBOSITY 6
 
 COPY iipsrv_entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/iipsrv_entrypoint.sh
