@@ -1,0 +1,2767 @@
+{
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@id": "http://example.org/iiif/book1/manifest",
+    "@type": "sc:Manifest",
+    "label": "All Images",
+    "sequences": [
+        {
+            "@id": "http://example.org/iiif/book1/sequence/normal",
+            "@type": "sc:Sequence",
+            "label": "Current Page Order",
+            "viewingDirection": "left-to-right",
+            "viewingHint": "non-paged",
+            "canvases": [
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_36716601.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 1 (gm_36716601.htj2k.jp2)",
+                    "height": 9747,
+                    "width": 7995,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36716601.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9747,
+                                "width": 7995,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36716601.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9747,
+                                    "width": 7995
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_36716601.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00002701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 2 (gm_00002701.htj2k.jp2)",
+                    "height": 8226,
+                    "width": 10828,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00002701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 8226,
+                                "width": 10828,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00002701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 8226,
+                                    "width": 10828
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00002701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_34942401.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 3 (gm_34942401.htj2k.jp2)",
+                    "height": 10588,
+                    "width": 6687,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_34942401.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10588,
+                                "width": 6687,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_34942401.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10588,
+                                    "width": 6687
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_34942401.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_37199501.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 4 (gm_37199501.htj2k.jp2)",
+                    "height": 10732,
+                    "width": 8123,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_37199501.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10732,
+                                "width": 8123,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_37199501.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10732,
+                                    "width": 8123
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_37199501.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00010701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 5 (gm_00010701.htj2k.jp2)",
+                    "height": 7485,
+                    "width": 11107,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00010701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7485,
+                                "width": 11107,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00010701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7485,
+                                    "width": 11107
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00010701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00106901.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 6 (gm_00106901.htj2k.jp2)",
+                    "height": 7572,
+                    "width": 9750,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00106901.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7572,
+                                "width": 9750,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00106901.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7572,
+                                    "width": 9750
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00106901.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_35817701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 7 (gm_35817701.htj2k.jp2)",
+                    "height": 7505,
+                    "width": 11301,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35817701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7505,
+                                "width": 11301,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35817701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7505,
+                                    "width": 11301
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_35817701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_96_r_14_b125_002_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 8 (gri_96_r_14_b125_002_mm.htj2k.jp2)",
+                    "height": 7648,
+                    "width": 9127,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_96_r_14_b125_002_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7648,
+                                "width": 9127,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_96_r_14_b125_002_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7648,
+                                    "width": 9127
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_96_r_14_b125_002_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_13547101.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 9 (gm_13547101.htj2k.jp2)",
+                    "height": 6188,
+                    "width": 11655,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_13547101.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 6188,
+                                "width": 11655,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_13547101.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 6188,
+                                    "width": 11655
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_13547101.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_35846501.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 10 (gm_35846501.htj2k.jp2)",
+                    "height": 11166,
+                    "width": 7940,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35846501.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 11166,
+                                "width": 7940,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35846501.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 11166,
+                                    "width": 7940
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_35846501.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_36717601.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 11 (gm_36717601.htj2k.jp2)",
+                    "height": 7627,
+                    "width": 11093,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36717601.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7627,
+                                "width": 11093,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36717601.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7627,
+                                    "width": 11093
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_36717601.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_11180401.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 12 (gm_11180401.htj2k.jp2)",
+                    "height": 8103,
+                    "width": 10170,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_11180401.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 8103,
+                                "width": 10170,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_11180401.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 8103,
+                                    "width": 10170
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_11180401.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2017_pr_14_001_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 13 (gri_2017_pr_14_001_mm.htj2k.jp2)",
+                    "height": 9720,
+                    "width": 7493,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2017_pr_14_001_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9720,
+                                "width": 7493,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2017_pr_14_001_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9720,
+                                    "width": 7493
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2017_pr_14_001_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2001_pr_2_001_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 14 (gri_2001_pr_2_001_mm.htj2k.jp2)",
+                    "height": 13561,
+                    "width": 33481,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2001_pr_2_001_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 13561,
+                                "width": 33481,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2001_pr_2_001_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 13561,
+                                    "width": 33481
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2001_pr_2_001_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_13139301.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 15 (gm_13139301.htj2k.jp2)",
+                    "height": 8004,
+                    "width": 10251,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_13139301.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 8004,
+                                "width": 10251,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_13139301.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 8004,
+                                    "width": 10251
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_13139301.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_37049301.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 16 (gm_37049301.htj2k.jp2)",
+                    "height": 9221,
+                    "width": 8579,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_37049301.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9221,
+                                "width": 8579,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_37049301.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9221,
+                                    "width": 8579
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_37049301.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00766201.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 17 (gm_00766201.htj2k.jp2)",
+                    "height": 10099,
+                    "width": 9920,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00766201.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10099,
+                                "width": 9920,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00766201.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10099,
+                                    "width": 9920
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00766201.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_950053_b33_ms205_pm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 18 (gri_950053_b33_ms205_pm.htj2k.jp2)",
+                    "height": 29319,
+                    "width": 2417,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_950053_b33_ms205_pm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 29319,
+                                "width": 2417,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_950053_b33_ms205_pm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 29319,
+                                    "width": 2417
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_950053_b33_ms205_pm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_31363101.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 19 (gm_31363101.htj2k.jp2)",
+                    "height": 11224,
+                    "width": 7505,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_31363101.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 11224,
+                                "width": 7505,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_31363101.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 11224,
+                                    "width": 7505
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_31363101.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2003_r_22_b008_007_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 20 (gri_2003_r_22_b008_007_mm.htj2k.jp2)",
+                    "height": 9758,
+                    "width": 7071,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2003_r_22_b008_007_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9758,
+                                "width": 7071,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2003_r_22_b008_007_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9758,
+                                    "width": 7071
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2003_r_22_b008_007_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_01109801.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 21 (gm_01109801.htj2k.jp2)",
+                    "height": 10392,
+                    "width": 7320,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_01109801.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10392,
+                                "width": 7320,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_01109801.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10392,
+                                    "width": 7320
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_01109801.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_11257701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 22 (gm_11257701.htj2k.jp2)",
+                    "height": 10256,
+                    "width": 6750,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_11257701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10256,
+                                "width": 6750,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_11257701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10256,
+                                    "width": 6750
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_11257701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_25326801.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 23 (gm_25326801.htj2k.jp2)",
+                    "height": 8175,
+                    "width": 15943,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_25326801.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 8175,
+                                "width": 15943,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_25326801.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 8175,
+                                    "width": 15943
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_25326801.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00104401.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 24 (gm_00104401.htj2k.jp2)",
+                    "height": 14460,
+                    "width": 13432,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00104401.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 14460,
+                                "width": 13432,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00104401.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 14460,
+                                    "width": 13432
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00104401.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_35533201.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 25 (gm_35533201.htj2k.jp2)",
+                    "height": 9433,
+                    "width": 7699,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35533201.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9433,
+                                "width": 7699,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35533201.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9433,
+                                    "width": 7699
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_35533201.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_36717901.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 26 (gm_36717901.htj2k.jp2)",
+                    "height": 9244,
+                    "width": 8092,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36717901.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9244,
+                                "width": 8092,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36717901.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9244,
+                                    "width": 8092
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_36717901.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00091001.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 27 (gm_00091001.htj2k.jp2)",
+                    "height": 9147,
+                    "width": 13673,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00091001.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9147,
+                                "width": 13673,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00091001.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9147,
+                                    "width": 13673
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00091001.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00096001.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 28 (gm_00096001.htj2k.jp2)",
+                    "height": 10973,
+                    "width": 7887,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00096001.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10973,
+                                "width": 7887,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00096001.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10973,
+                                    "width": 7887
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00096001.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_35448401.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 29 (gm_35448401.htj2k.jp2)",
+                    "height": 7247,
+                    "width": 11101,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35448401.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7247,
+                                "width": 11101,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35448401.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7247,
+                                    "width": 11101
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_35448401.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00609701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 30 (gm_00609701.htj2k.jp2)",
+                    "height": 12561,
+                    "width": 8359,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00609701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 12561,
+                                "width": 8359,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00609701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 12561,
+                                    "width": 8359
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00609701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2014_pr_24_001_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 31 (gri_2014_pr_24_001_mm.htj2k.jp2)",
+                    "height": 7197,
+                    "width": 15792,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2014_pr_24_001_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7197,
+                                "width": 15792,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2014_pr_24_001_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7197,
+                                    "width": 15792
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2014_pr_24_001_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_35822301.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 32 (gm_35822301.htj2k.jp2)",
+                    "height": 9768,
+                    "width": 7586,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35822301.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9768,
+                                "width": 7586,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35822301.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9768,
+                                    "width": 7586
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_35822301.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2015_r_15_pano_095_098_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 33 (gri_2015_r_15_pano_095_098_mm.htj2k.jp2)",
+                    "height": 5700,
+                    "width": 27150,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2015_r_15_pano_095_098_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 5700,
+                                "width": 27150,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2015_r_15_pano_095_098_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 5700,
+                                    "width": 27150
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2015_r_15_pano_095_098_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_34954501.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 34 (gm_34954501.htj2k.jp2)",
+                    "height": 10844,
+                    "width": 8683,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_34954501.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10844,
+                                "width": 8683,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_34954501.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10844,
+                                    "width": 8683
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_34954501.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00838501.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 35 (gm_00838501.htj2k.jp2)",
+                    "height": 10328,
+                    "width": 7760,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00838501.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10328,
+                                "width": 7760,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00838501.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10328,
+                                    "width": 7760
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00838501.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00814101.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 36 (gm_00814101.htj2k.jp2)",
+                    "height": 10328,
+                    "width": 7760,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00814101.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10328,
+                                "width": 7760,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00814101.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10328,
+                                    "width": 7760
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00814101.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2011_m_34_001_pm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 37 (gri_2011_m_34_001_pm.htj2k.jp2)",
+                    "height": 15009,
+                    "width": 6145,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2011_m_34_001_pm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 15009,
+                                "width": 6145,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2011_m_34_001_pm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 15009,
+                                    "width": 6145
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2011_m_34_001_pm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_36717701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 38 (gm_36717701.htj2k.jp2)",
+                    "height": 10880,
+                    "width": 7316,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36717701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10880,
+                                "width": 7316,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36717701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10880,
+                                    "width": 7316
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_36717701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_35594601.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 39 (gm_35594601.htj2k.jp2)",
+                    "height": 10237,
+                    "width": 7440,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35594601.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10237,
+                                "width": 7440,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_35594601.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10237,
+                                    "width": 7440
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_35594601.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_p840001_ff07_001_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 40 (gri_p840001_ff07_001_mm.htj2k.jp2)",
+                    "height": 7575,
+                    "width": 9947,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_p840001_ff07_001_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7575,
+                                "width": 9947,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_p840001_ff07_001_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7575,
+                                    "width": 9947
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_p840001_ff07_001_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_91_m0_025_pm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 41 (gri_91_m0_025_pm.htj2k.jp2)",
+                    "height": 12710,
+                    "width": 15000,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_91_m0_025_pm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 12710,
+                                "width": 15000,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_91_m0_025_pm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 12710,
+                                    "width": 15000
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_91_m0_025_pm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00094501.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 42 (gm_00094501.htj2k.jp2)",
+                    "height": 9477,
+                    "width": 7171,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00094501.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9477,
+                                "width": 7171,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00094501.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9477,
+                                    "width": 7171
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00094501.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_36091601.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 43 (gm_36091601.htj2k.jp2)",
+                    "height": 10425,
+                    "width": 8006,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36091601.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 10425,
+                                "width": 8006,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36091601.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 10425,
+                                    "width": 8006
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_36091601.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_01491701.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 44 (gm_01491701.htj2k.jp2)",
+                    "height": 7760,
+                    "width": 10328,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_01491701.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7760,
+                                "width": 10328,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_01491701.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7760,
+                                    "width": 10328
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_01491701.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00960601.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 45 (gm_00960601.htj2k.jp2)",
+                    "height": 8111,
+                    "width": 11572,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00960601.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 8111,
+                                "width": 11572,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00960601.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 8111,
+                                    "width": 11572
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00960601.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_2012_pr_71_pm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 46 (gri_2012_pr_71_pm.htj2k.jp2)",
+                    "height": 18712,
+                    "width": 34137,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2012_pr_71_pm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 18712,
+                                "width": 34137,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_2012_pr_71_pm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 18712,
+                                    "width": 34137
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_2012_pr_71_pm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00678301.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 47 (gm_00678301.htj2k.jp2)",
+                    "height": 18116,
+                    "width": 12103,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00678301.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 18116,
+                                "width": 12103,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00678301.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 18116,
+                                    "width": 12103
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00678301.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gri_p850002_b02_f27_001_mm.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 48 (gri_p850002_b02_f27_001_mm.htj2k.jp2)",
+                    "height": 7724,
+                    "width": 9614,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_p850002_b02_f27_001_mm.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 7724,
+                                "width": 9614,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gri_p850002_b02_f27_001_mm.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 7724,
+                                    "width": 9614
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gri_p850002_b02_f27_001_mm.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_36481101.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 49 (gm_36481101.htj2k.jp2)",
+                    "height": 11212,
+                    "width": 6971,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36481101.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 11212,
+                                "width": 6971,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_36481101.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 11212,
+                                    "width": 6971
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_36481101.htj2k.jp2"
+                        }
+                    ]
+                },
+                {
+                    "@id": "http://example.org/iiif/book1/canvas/gm_00045001.htj2k.jp2",
+                    "@type": "sc:Canvas",
+                    "label": "Canvas: 50 (gm_00045001.htj2k.jp2)",
+                    "height": 9867,
+                    "width": 7892,
+                    "images": [
+                        {
+                            "@type": "oa:Annotation",
+                            "motivation": "sc:painting",
+                            "resource": {
+                                "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00045001.htj2k.jp2/full/1024,/0/default.jpg",
+                                "@type": "dctypes:Image",
+                                "format": "image/jpeg",
+                                "height": 9867,
+                                "width": 7892,
+                                "service": {
+                                    "@context": "http://iiif.io/api/image/2/context.json",
+                                    "@id": "http://localhost:8000/iiif/htj2k/lossless/gm_00045001.htj2k.jp2",
+                                    "profile": [
+                                        "http://iiif.io/api/image/2/level1.json",
+                                        {
+                                            "formats": [
+                                                "jpg",
+                                                "png",
+                                                "webp"
+                                            ],
+                                            "qualities": [
+                                                "native",
+                                                "color",
+                                                "gray",
+                                                "bitonal"
+                                            ],
+                                            "supports": [
+                                                "regionByPct",
+                                                "regionSquare",
+                                                "sizeByForcedWh",
+                                                "sizeByWh",
+                                                "sizeAboveFull",
+                                                "sizeUpscaling",
+                                                "rotationBy90s",
+                                                "mirroring"
+                                            ],
+                                            "maxWidth": 30000,
+                                            "maxHeight": 30000
+                                        }
+                                    ],
+                                    "height": 9867,
+                                    "width": 7892
+                                }
+                            },
+                            "on": "http://example.org/iiif/book1/canvas/gm_00045001.htj2k.jp2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
