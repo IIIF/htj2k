@@ -6,10 +6,10 @@ This repository will be a place to publish our data and scripts so others can sc
 
 ## Presentations & reports
 
-    * [IIIF Community call - introduction htj2k](https://www.youtube.com/watch?v=nzkn0W2esOQ)
-      * [Mike's presentation](https://docs.google.com/presentation/d/1Y4npwMKaZLDWATG8FeXS03BkfdmEfiIl/edit#slide=id.p1)
-      * [Ruven's presentation](https://merovingio.c2rmf.cnrs.fr/HTJ2K/)
-    * [Glen's local docker image server tests](reports/glen/2022-08-16.md)
+* [IIIF Community call - introduction htj2k](https://www.youtube.com/watch?v=nzkn0W2esOQ)
+  * [Mike's presentation](https://docs.google.com/presentation/d/1Y4npwMKaZLDWATG8FeXS03BkfdmEfiIl/edit#slide=id.p1)
+  * [Ruven's presentation](https://merovingio.c2rmf.cnrs.fr/HTJ2K/)
+* [Glen's local docker image server tests](reports/glen/2022-08-16.md)
 
 ## Creating jp2s, htj2k images and ptiffs
 
@@ -41,45 +41,3 @@ locust -u  1 --autostart --url-list ../../data/50_images/mirador_urls.txt --host
 
 Note you must have the image server running on port 8000 as configured in the supplied Docker.
 
-
-## Setup Instructions (*nix)
-
-
-Create a project folder:
-
-```
-mkdir htj2k
-```
-
-Create Python virtual environment:
-
-```
-cd htj2k
-python3 -m venv venv
-source venv/bin/activate
-```
-
-Clone this repo:
-
-```
-git clone git@github.com:IIIF/htj2k.git src
-```
-
-Install dependencies:
-
-```
-cd src
-pip install -r requirements.txt
-```
-
-# docker
-## build docker
-`docker build --rm -f ./src/Dockerfile -t iiif-htj2k:latest .`
-## run docker
-`docker run -it --rm  iiif-htj2k:latest`
-`docker run -it --rm -v /home/miksmith/2022_04_18/:/usr/src/iiif-htj2k/build/ iiif-htj2k:latest`
-
-## run compression script on TIF files within the original/GRI directory
-`bash ./src/convert/convert.sh ./build/original/GRI/ ./build/compressed/ ptiff ./build/logs/`
-`bash ./src/convert/convert.sh ./build/test/ ./build/compressed/ ptiff ./build/logs`
-`bash ./src/scripts/run_all_encodes.sh`
