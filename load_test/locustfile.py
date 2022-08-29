@@ -119,6 +119,7 @@ class IIIFSwarmer(HttpUser):
         super().__init__(*args, **kwargs)
         with open(DATAFILE, 'r') as fh:
             self.ids = fh.read().splitlines()
+        self.ct = len(self.ids)
 
     tasks = [Derivatives]
     wait_time = constant(0.)
