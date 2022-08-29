@@ -2,7 +2,7 @@ import random
 
 from os import environ, path
 
-from locust import HttpUser, SequentialTaskSet, TaskSet, between, task
+from locust import HttpUser, SequentialTaskSet, constant, task
 
 __doc__ = """
 Locustfile to load-test IIIF implementation.
@@ -43,12 +43,9 @@ class Derivatives(SequentialTaskSet):
     This class picks ONE image identifier and requests a constant number of
     full-size, large, random area and thumbnail derivatives.
     """
-    i = 0
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         # Index of image list.
-        self.i = 0
 
     @task
     def deriv_large(self):
@@ -79,9 +76,9 @@ class Derivatives(SequentialTaskSet):
 
     @task
     def stop(self):
-        print(f"Index: {self.i}")
-        self.i += 1
-        self.interrupt(True)
+        print(f"Index: {self.parent.i}")
+        self.parent.i += 1
+        self.parent.interrupt(True)
 
     def _request_derivative(self, size, region=None, reg_type=None):
         """
@@ -103,7 +100,7 @@ class Derivatives(SequentialTaskSet):
             size_str = 'full'
             stats_name = f'{{derv_sz: "{reg_type}"}}'
 
-        id = self.parent.ids[self.i]
+        id = self.parent.ids[self.parent.i]
         url_str = IIIF_URL_PTN.format(
             id=id,
             reg_str=reg_str,
@@ -112,25 +109,16 @@ class Derivatives(SequentialTaskSet):
         self.client.get(url_str, name=stats_name)
 
 
-class Sources(TaskSet):
+class IIIFSwarmer(HttpUser):
     """
-    Sources task set.
-
-    Responsible for choosing a list of images from which its sub-task,
-    ``Derivatives``, chooses random images to request.
+    Locust class.
     """
+    i = 0
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         with open(DATAFILE, 'r') as fh:
             self.ids = fh.read().splitlines()
 
-    tasks = {Derivatives: 1}
-
-
-class IIIFSwarmer(HttpUser):
-    """
-    Locust class.
-    """
-    tasks = {Sources: 1}
-    wait_time = between(0., .2)
+    tasks = [Derivatives]
+    wait_time = constant(0.)
