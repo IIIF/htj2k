@@ -91,7 +91,7 @@ ENV FILESYSTEM_PREFIX "/data/images/"
 ENV INTERPOLATION 1
 ENV JPEG_QUALITY 90
 ENV MAX_CVT 30000
-ENV VERBOSITY 6
+ENV VERBOSITY 1
 
 COPY iipsrv_entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/iipsrv_entrypoint.sh
