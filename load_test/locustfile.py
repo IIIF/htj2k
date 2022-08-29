@@ -43,25 +43,32 @@ class Derivatives(SequentialTaskSet):
     This class picks ONE image identifier and requests a constant number of
     full-size, large, random area and thumbnail derivatives.
     """
-    @task(1)
+    i = 0
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Index of image list.
+        self.i = 0
+
+    @task
     def deriv_large(self):
         self._request_derivative(4096)
 
-    @task(2)
+    @task
     def deriv_med(self):
         self._request_derivative(1024)
 
-    @task(4)
+    @task
     def deriv_thumb(self):
         self._request_derivative(128)
 
-    @task(4)
+    @task
     def deriv_rnd_region(self):
         self._request_derivative(
                 512, (random.randint(0, 1024), random.randint(0, 1024)),
                 "rnd_region")
 
-    @task(4)
+    @task
     def deriv_aligned_tile(self):
         # Align random coordinates to a 512*512 grid.
         x = random.randint(0, 4096 + 512 - 1)
@@ -70,9 +77,11 @@ class Derivatives(SequentialTaskSet):
         y -= y % 512
         self._request_derivative(512, (x, y), "tile")
 
-    @task(1)
+    @task
     def stop(self):
-        self.interrupt()
+        print(f"Index: {self.i}")
+        self.i += 1
+        self.interrupt(True)
 
     def _request_derivative(self, size, region=None, reg_type=None):
         """
@@ -94,7 +103,7 @@ class Derivatives(SequentialTaskSet):
             size_str = 'full'
             stats_name = f'{{derv_sz: "{reg_type}"}}'
 
-        id = random.choice(self.parent.ids)
+        id = self.parent.ids[self.i]
         url_str = IIIF_URL_PTN.format(
             id=id,
             reg_str=reg_str,
