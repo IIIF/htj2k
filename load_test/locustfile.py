@@ -77,7 +77,7 @@ class Derivatives(SequentialTaskSet):
     @task
     def stop(self):
         print(f"Index: {self.parent.i}")
-        self.parent.i += 1
+        self.parent.i = (self.parent.i + 1) % self.parent.ct
         self.interrupt(True)
 
     def _request_derivative(self, size, region=None, reg_type=None):
