@@ -2,7 +2,7 @@ import random
 
 from os import environ, path
 
-from locust import HttpUser, SequentialTaskSet, constant
+from locust import HttpUser, SequentialTaskSet, constant, task
 
 __doc__ = """
 Locustfile to load-test IIIF implementation.
@@ -45,21 +45,27 @@ class Derivatives(SequentialTaskSet):
     """
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        # Index of image list.
 
+    @task(1)
     def deriv_large(self):
         self._request_derivative(4096)
 
+    @task(4)
     def deriv_med(self):
         self._request_derivative(1024)
 
+    @task(20)
     def deriv_thumb(self):
         self._request_derivative(128)
 
+    @task(8)
     def deriv_rnd_region(self):
         self._request_derivative(
                 512, (random.randint(0, 1024), random.randint(0, 1024)),
                 "rnd_region")
 
+    @task(8)
     def deriv_aligned_tile(self):
         # Align random coordinates to a 512*512 grid.
         x = random.randint(0, 4096 + 512 - 1)
@@ -68,19 +74,11 @@ class Derivatives(SequentialTaskSet):
         y -= y % 512
         self._request_derivative(512, (x, y), "tile")
 
+    @task(1)
     def stop(self):
         # print(f"Index: {self.parent.i}")
         self.parent.i = (self.parent.i + 1) % self.parent.ct
         self.interrupt(True)
-
-    tasks = (
-        [deriv_large] +
-        [deriv_med for _ in range(4)] +
-        [deriv_thumb for _ in range(20)] +
-        [deriv_rnd_region for _ in range(8)] +
-        [deriv_aligned_tile for _ in range(8)] +
-        [stop]
-    )
 
     def _request_derivative(self, size, region=None, reg_type=None):
         """
