@@ -45,13 +45,6 @@ class Derivatives(SequentialTaskSet):
     """
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.tasks = (
-            [self.deriv_large] +
-            [self.deriv_med for _ in range(4)] +
-            [self.deriv_thumb for _ in range(20)] +
-            [self.deriv_rnd_region for _ in range(8)] +
-            [self.deriv_aligned_tile for _ in range(8)]
-        )
 
     def deriv_large(self):
         self._request_derivative(4096)
@@ -79,6 +72,15 @@ class Derivatives(SequentialTaskSet):
         # print(f"Index: {self.parent.i}")
         self.parent.i = (self.parent.i + 1) % self.parent.ct
         self.interrupt(True)
+
+    tasks = (
+        [deriv_large] +
+        [deriv_med for _ in range(4)] +
+        [deriv_thumb for _ in range(20)] +
+        [deriv_rnd_region for _ in range(8)] +
+        [deriv_aligned_tile for _ in range(8)] +
+        [stop]
+    )
 
     def _request_derivative(self, size, region=None, reg_type=None):
         """
