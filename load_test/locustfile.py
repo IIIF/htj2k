@@ -62,17 +62,15 @@ class Derivatives(SequentialTaskSet):
     @task(8)
     def deriv_rnd_region(self):
         self._request_derivative(
-                512, (random.randint(0, 1024), random.randint(0, 1024)),
+                256, (random.randint(0, 1024), random.randint(0, 1024)),
                 "rnd_region")
 
     @task(8)
     def deriv_aligned_tile(self):
-        # Align random coordinates to a 512*512 grid.
-        x = random.randint(0, 4096 + 512 - 1)
-        x -= x % 512
-        y = random.randint(0, 4096 + 512 - 1)
-        y -= y % 512
-        self._request_derivative(512, (x, y), "tile")
+        # Align random coordinates to a 256*256 grid.
+        x = random.randint(0, 8) * 256
+        y = random.randint(0, 8) * 256
+        self._request_derivative(256, (x, y), "tile")
 
     @task(1)
     def stop(self):
