@@ -46,3 +46,40 @@ These are requests for tiles where the requested coordinates exactly match the t
   <img src="charts/tile.png" alt="Stefano's script tile" width="50%"/>
   <img src="../charts/all_urls.png" alt="Glen's tile test" width="50%"/>
 </div>
+
+
+### Thumbnails
+
+These are also popular requests although different viewers request different sizes 128 pixels should be a good compromise. My tests used a 50px width image rather than 128px.
+
+<div style="display: flex;">
+  <img src="charts/128.png" alt="Stefano's script 128px" width="50%"/>
+  <img src="../charts/150.png" alt="Glen's thumbnail test" width="50%"/>
+</div>
+
+### Mid sized image
+
+This is a test of the full image but reduced to 1024px. This can be useful as a small download.
+
+<div style="display: flex;">
+  <img src="charts/1024.png" alt="Stefano's script 1024px" width="50%"/>
+  <img src="../charts/1024.png" alt="Glen's 1024 test" width="50%"/>
+</div>
+
+### Large sized image
+
+This is a larger full region image. In Stefano's case its 4096 but in mine it was 3000px. 
+
+<div style="display: flex;">
+  <img src="charts/4096.png" alt="Stefano's script 4096px" width="50%"/>
+  <img src="../charts/3000.png" alt="Glen's 3000 test" width="50%"/>
+</div>
+
+### Random region
+
+This is a more unusual use case where a user wants to request a region of a image which isn't aligned to a tile.  Stefano's images are a between 0-1024 pixels wide and tall. For mine they are 200px wide and high.
+
+<div style="display: flex;">
+  <img src="charts/rnd_region.png" alt="Stefano's random region" width="50%"/>
+  <img src="../charts/custom-region-small.png" alt="Custom region small" width="50%"/>
+</div>
