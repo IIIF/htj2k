@@ -43,6 +43,6 @@ I will be comparing the results using Stefano's scripts with the results in [16t
 These are requests for tiles where the requested coordinates exactly match the tiles generated and reported in the info.json. This is by far the most common use case of IIIF which allows an image to be shown in a zoomable viewer. 
 
 <div style="display: flex;">
-  <img src="charts/tile.png" alt="Stefano's script tile" style="margin: 5px;"/>
-  <img src="../charts/all_urls.png" alt="Glen's tile test" style="margin: 5px"/>
+  <img src="charts/tile.png" alt="Stefano's script tile" width="50%"/>
+  <img src="../charts/all_urls.png" alt="Glen's tile test" width="50%"/>
 </div>
