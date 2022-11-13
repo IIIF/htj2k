@@ -15,12 +15,11 @@ RUN apt install -y build-essential libopenjp2-7-dev libopenjp2-tools \
 
 # Copy and compile Kakadu codec.
 WORKDIR ${_workroot}
-COPY kakadu ./kakadu
-#COPY kakadu/v8_2_1-02075E ./kakadu
-WORKDIR ${_workroot}/kakadu/make
+COPY ./kakadu/current ./kakadu-sdk
+WORKDIR ${_workroot}/kakadu-sdk/make
 RUN make -f Makefile-Linux-x86-64-gcc clean
 RUN make -f Makefile-Linux-x86-64-gcc all_but_jni
-WORKDIR ${_workroot}/kakadu
+WORKDIR ${_workroot}/kakadu-sdk
 RUN cp -r apps coresys managed /usr/local/lib
 RUN cp lib/Linux-x86-64-gcc/* /usr/local/lib
 RUN cp bin/Linux-x86-64-gcc/* /usr/local/bin

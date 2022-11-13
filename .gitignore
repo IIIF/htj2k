@@ -138,3 +138,5 @@ dmypy.json
 
 # Kakadu proprietary sources.
 image_server/kakadu
+# Source images. Too big for VCS.
+data/images

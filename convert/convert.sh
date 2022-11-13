@@ -5,7 +5,7 @@ set -u
 #set -x
 
 if [[ "$#" -lt 4 || ( "${3}" != "ptiff_lossy" && "${3}" != "ptiff_lossless" && "${3}" != "j2k1_lossy" && "${3}" != "j2k1_lossless" && "${3}" != "htj2k_lossy" && "${3}" != "htj2k_lossless") ]]; then
-    echo -e "Usage: ${0} <source> <base output path> <output format> <logs_directory>\n" \
+    echo -e "Usage: ${0} <source> <base output path> <output format> <logs_directory> <iterations>\n" \
         "Where:\n"\
         " * <source> is the full path to the source file(s) (glob patterns and directories are allowed), \n" \
         " * <base output path> is the path under which per-format output folders will be created  \n" \
