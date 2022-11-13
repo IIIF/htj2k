@@ -11,7 +11,7 @@ if [[ "$#" -lt 4 || ( "${3}" != "ptiff_lossy" && "${3}" != "ptiff_lossless" && "
         " * <base output path> is the path under which per-format output folders will be created  \n" \
         " * <output format> is one of 'ptiff_lossy', 'ptiff_lossless' 'j2k1_lossy', 'j2k1_lossless', 'htj2k_lossy' or 'htj2k_lossless'\n" \
         " * <logs_directory> is a directory where the timing logs will be stored (note this will only work if you have GNU date installed)\n" \
-        " * <iterations> number of iterations. Defaults to 10"
+        " * <iterations> number of iterations. Defaults to 1"
     exit 1
 fi
 
@@ -31,11 +31,14 @@ echo "Input pattern: ${in_ptn}"
 if [[ "$#" -eq 5 ]]; then
     number_of_encode_cycle_iterations=$5
 else
-    number_of_encode_cycle_iterations=10
+    number_of_encode_cycle_iterations=1
 fi    
 
 # setup log files
 if $doTiming; then
+    # Create parent directory if it doesn't exist.
+    mkdir -p "${logs_directory}" 2>&1 > /dev/null || true
+
     date_for_filename=`date +"%Y-%m-%d-%H-%M-%S_%N"`
     log_filename="$logs_directory/$format.${date_for_filename}.log.txt" 
 
@@ -62,6 +65,10 @@ for in_path in $in_ptn/*.{tif,TIF}; do
         # start timer
         let duration_all_iterations_nanoseconds=0
     fi    
+
+    # Create parent directory if it doesn't exist.
+    mkdir -p "${out_base_path}" 2>&1 > /dev/null || true
+
     for encoding_cycle_iteration in $(seq 1 $number_of_encode_cycle_iterations)
     do
         if $doTiming; then
