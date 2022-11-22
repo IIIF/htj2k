@@ -6,7 +6,7 @@ ENV _workroot /usr/local/src
 ENV _iipsrv_version 1.1
 # iipsrv commit to use (for trunk build).
 ENV _iipsrv_commit f57b41b06ee536b6ff3aba095884107d3ffea139
-# f57b41b06ee536b6ff3aba095884107d3ffea139
+# Glen tests originally done on 337aa85f46866255c27b835d69e30e562662cc72
 
 RUN apt update
 RUN apt install -y git autoconf automake libtool pkg-config
@@ -90,7 +90,7 @@ ENV FILESYSTEM_PREFIX "/data/images/"
 ENV INTERPOLATION 1
 ENV JPEG_QUALITY 90
 ENV MAX_CVT 30000
-ENV VERBOSITY 1
+ENV VERBOSITY 6
 
 COPY iipsrv_entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/iipsrv_entrypoint.sh
