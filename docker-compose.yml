@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+  iipimage_opj:
+    build:
+      context: ./image_server
+    ports:
+      - 8000:8000
+    volumes:
+      - ./data/images:/data/images
+    networks:
+      - htj2k
+
+  iipimage_kdu:
+    build:
+      context: ./image_server
+    environment:
+      - IIPSRV_ENGINE=kakadu
+    ports:
+      - 8001:8000
+    volumes:
+      - ./data/images:/data/images
+    networks:
+      - htj2k
+
+  convert:
+    build:
+      context: .
+      dockerfile: convert.Dockerfile
+    volumes:
+      - ./:/usr/local/src/htj2k
+      - ./data/images:/data/images
+    networks:
+      - htj2k
+
+  load_test:
+    build:
+      context: ./load_test
+    volumes:
+      - ./:/usr/local/src/htj2k
+    networks:
+      - htj2k
+
+networks:
+  htj2k:
