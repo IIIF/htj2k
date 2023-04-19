@@ -1,0 +1,26 @@
+{
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "protocol" : "http://iiif.io/api/image",
+  "width" : 27150,
+  "height" : 5700,
+  "sizes" : [
+     { "width" : 212, "height" : 44 },
+     { "width" : 424, "height" : 89 },
+     { "width" : 848, "height" : 178 },
+     { "width" : 1696, "height" : 356 },
+     { "width" : 3393, "height" : 712 },
+     { "width" : 6787, "height" : 1425 },
+     { "width" : 13575, "height" : 2850 }
+  ],
+  "tiles" : [
+     { "width" : 256, "height" : 256, "scaleFactors" : [ 1, 2, 4, 8, 16, 32, 64, 128 ] }
+  ],
+  "id" : "http://localhost/iiif/lossless/gri_2015_r_15_pano_095_098_mm.tif",
+  "type": "ImageService3",
+  "profile" : "level2",
+  "maxWidth" : 50000,
+  "maxHeight" : 50000,
+  "extraQualities": ["color","gray","bitonal"],
+  "extraFormats": ["webp"],
+  "extraFeatures": ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","sizeUpscaling","rotationBy90s","mirroring"]
+}

@@ -1,0 +1,26 @@
+{
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "protocol" : "http://iiif.io/api/image",
+  "width" : 2417,
+  "height" : 29319,
+  "sizes" : [
+     { "width" : 18, "height" : 229 },
+     { "width" : 37, "height" : 458 },
+     { "width" : 75, "height" : 916 },
+     { "width" : 151, "height" : 1832 },
+     { "width" : 302, "height" : 3664 },
+     { "width" : 604, "height" : 7329 },
+     { "width" : 1208, "height" : 14659 }
+  ],
+  "tiles" : [
+     { "width" : 256, "height" : 256, "scaleFactors" : [ 1, 2, 4, 8, 16, 32, 64, 128 ] }
+  ],
+  "id" : "http://localhost/iiif/lossless/gri_950053_b33_ms205_pm.tif",
+  "type": "ImageService3",
+  "profile" : "level2",
+  "maxWidth" : 50000,
+  "maxHeight" : 50000,
+  "extraQualities": ["color","gray","bitonal"],
+  "extraFormats": ["webp"],
+  "extraFeatures": ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","sizeUpscaling","rotationBy90s","mirroring"]
+}

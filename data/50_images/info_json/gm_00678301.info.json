@@ -1,0 +1,26 @@
+{
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "protocol" : "http://iiif.io/api/image",
+  "width" : 12103,
+  "height" : 18116,
+  "sizes" : [
+     { "width" : 94, "height" : 141 },
+     { "width" : 189, "height" : 283 },
+     { "width" : 378, "height" : 566 },
+     { "width" : 756, "height" : 1132 },
+     { "width" : 1512, "height" : 2264 },
+     { "width" : 3025, "height" : 4529 },
+     { "width" : 6051, "height" : 9058 }
+  ],
+  "tiles" : [
+     { "width" : 256, "height" : 256, "scaleFactors" : [ 1, 2, 4, 8, 16, 32, 64, 128 ] }
+  ],
+  "id" : "http://localhost/iiif/lossless/gm_00678301.tif",
+  "type": "ImageService3",
+  "profile" : "level2",
+  "maxWidth" : 50000,
+  "maxHeight" : 50000,
+  "extraQualities": ["color","gray","bitonal"],
+  "extraFormats": ["webp"],
+  "extraFeatures": ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","sizeUpscaling","rotationBy90s","mirroring"]
+}

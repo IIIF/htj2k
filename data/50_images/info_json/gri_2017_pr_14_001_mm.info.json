@@ -1,0 +1,25 @@
+{
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "protocol" : "http://iiif.io/api/image",
+  "width" : 7493,
+  "height" : 9720,
+  "sizes" : [
+     { "width" : 117, "height" : 151 },
+     { "width" : 234, "height" : 303 },
+     { "width" : 468, "height" : 607 },
+     { "width" : 936, "height" : 1215 },
+     { "width" : 1873, "height" : 2430 },
+     { "width" : 3746, "height" : 4860 }
+  ],
+  "tiles" : [
+     { "width" : 256, "height" : 256, "scaleFactors" : [ 1, 2, 4, 8, 16, 32, 64 ] }
+  ],
+  "id" : "http://localhost/iiif/lossless/gri_2017_pr_14_001_mm.tif",
+  "type": "ImageService3",
+  "profile" : "level2",
+  "maxWidth" : 50000,
+  "maxHeight" : 50000,
+  "extraQualities": ["color","gray","bitonal"],
+  "extraFormats": ["webp"],
+  "extraFeatures": ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","sizeUpscaling","rotationBy90s","mirroring"]
+}

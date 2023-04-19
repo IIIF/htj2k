@@ -1,0 +1,25 @@
+{
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "protocol" : "http://iiif.io/api/image",
+  "width" : 6145,
+  "height" : 15009,
+  "sizes" : [
+     { "width" : 96, "height" : 234 },
+     { "width" : 192, "height" : 469 },
+     { "width" : 384, "height" : 938 },
+     { "width" : 768, "height" : 1876 },
+     { "width" : 1536, "height" : 3752 },
+     { "width" : 3072, "height" : 7504 }
+  ],
+  "tiles" : [
+     { "width" : 256, "height" : 256, "scaleFactors" : [ 1, 2, 4, 8, 16, 32, 64 ] }
+  ],
+  "id" : "http://localhost/iiif/lossless/gri_2011_m_34_001_pm.tif",
+  "type": "ImageService3",
+  "profile" : "level2",
+  "maxWidth" : 50000,
+  "maxHeight" : 50000,
+  "extraQualities": ["color","gray","bitonal"],
+  "extraFormats": ["webp"],
+  "extraFeatures": ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","sizeUpscaling","rotationBy90s","mirroring"]
+}

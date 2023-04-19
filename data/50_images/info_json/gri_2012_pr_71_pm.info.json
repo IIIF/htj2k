@@ -1,0 +1,27 @@
+{
+  "@context" : "http://iiif.io/api/image/3/context.json",
+  "protocol" : "http://iiif.io/api/image",
+  "width" : 34137,
+  "height" : 18712,
+  "sizes" : [
+     { "width" : 133, "height" : 73 },
+     { "width" : 266, "height" : 146 },
+     { "width" : 533, "height" : 292 },
+     { "width" : 1066, "height" : 584 },
+     { "width" : 2133, "height" : 1169 },
+     { "width" : 4267, "height" : 2339 },
+     { "width" : 8534, "height" : 4678 },
+     { "width" : 17068, "height" : 9356 }
+  ],
+  "tiles" : [
+     { "width" : 256, "height" : 256, "scaleFactors" : [ 1, 2, 4, 8, 16, 32, 64, 128, 256 ] }
+  ],
+  "id" : "http://localhost/iiif/lossless/gri_2012_pr_71_pm.tif",
+  "type": "ImageService3",
+  "profile" : "level2",
+  "maxWidth" : 50000,
+  "maxHeight" : 50000,
+  "extraQualities": ["color","gray","bitonal"],
+  "extraFormats": ["webp"],
+  "extraFeatures": ["regionByPct","sizeByForcedWh","sizeByWh","sizeAboveFull","sizeUpscaling","rotationBy90s","mirroring"]
+}
