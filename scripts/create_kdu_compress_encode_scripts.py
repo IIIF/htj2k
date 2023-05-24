@@ -76,10 +76,12 @@ for codeblock_parameter in codeblock_parameters:
     # digital bodelian - lossless - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
     encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes -rate -"
     test_label_prefix="j2k1_digital_bodelian_lossless_codeblock"
+    output_file_extension = '.jp2'
   elif encoding_parameter_set == 3:
     # digital bodelian - lossy - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
     encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 -rate 3"
     test_label_prefix="j2k1_digital_bodelian_lossy_codeblock"
+    output_file_extension = '.jp2'
   elif encoding_parameter_set == 4:
     # HT digital bodelian - lossless - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
     encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT -rate -"
@@ -96,6 +98,7 @@ for codeblock_parameter in codeblock_parameters:
     # j2k1 lossless with PLT
     encoding_parameters="Creversible=yes ORGgen_plt=yes Corder=RPCL Cprecincts=\"{256,256}\" Cblk=\"{" + codeblock_parameter + "}\""
     test_label_prefix="j2k1_lossless_plt_codeblock"
+    output_file_extension = '.jp2'
   elif encoding_parameter_set == 8:
     # HT lossy Qfactor 90 with PLT
     encoding_parameters="Cmodes=HT Creversible=no Qfactor=90 ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
@@ -108,6 +111,7 @@ for codeblock_parameter in codeblock_parameters:
     # j2k1 lossy 3.0 bpp with PLT
     encoding_parameters="Creversible=no -rate 3 Corder=RPCL Cprecincts=\"{256,256}\" ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
     test_label_prefix="j2k1_lossy_3bpp_plt_codeblock"
+    output_file_extension = '.jp2'
   else:
     print( "encoding_parameter_set = '" + str(encoding_parameter_set) + "' is not supported yet, exiting" )
     exit( -1 )
