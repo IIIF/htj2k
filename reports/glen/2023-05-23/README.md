@@ -206,9 +206,9 @@ Results for the round 1 images are very close to the [2022-08-16](https://github
 
 htj2k-lossless is clearly the slowest (95ms). This is mainly due to the lack of the PLT metadata headers which allow quick navigation. This can be compared with htj2k_lossless_plt (37ms) and htj2k-lossy-round1 (36ms) which both have plt. 
 
-Generally htj2k is faster than the corresponding jp2 apart from j2k1_bodelian_lossy (47ms) and htj2k_bodelian_lossy (50ms).
+Generally htj2k is faster than the corresponding jp2 apart from j2k1_Bodleian_lossy (47ms) and htj2k_Bodleian_lossy (50ms).
 
-j2k bodelian lossy: 
+j2k Bodleian lossy: 
  * "Cprecincts={256,256},{256,256},{128,128}" 
  * "Stiles={512,512}" 
  * Corder=RPCL 
@@ -490,5 +490,5 @@ Observations:
 
 ## Questions
 
-1. In `create_kdu_compress_encode_script.py` should j2k1_digital_bodelian_lossless_codeblock and htj2k_digital_bodelian_lossy_codeblock have `-rate -`?
-2. Why is the Bodelian profile so slow for 50px thumbnails? 
+1. In `create_kdu_compress_encode_script.py` should j2k1_digital_bodelian_lossless_codeblock and htj2k_digital_Bodleian_lossy_codeblock have `-rate -`?
+2. Why is the Bodleian profile so slow for 50px thumbnails? 
