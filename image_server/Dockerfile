@@ -1,5 +1,7 @@
 FROM ubuntu:jammy
 
+ARG kakadu=./kakadu/current
+
 # Working source root.
 ENV _workroot /usr/local/src
 # iipsrv version to use (for release build).
@@ -15,7 +17,7 @@ RUN apt install -y build-essential libopenjp2-7-dev libopenjp2-tools \
 
 # Copy and compile Kakadu codec.
 WORKDIR ${_workroot}
-COPY ./kakadu/current ./kakadu-sdk
+COPY ${kakadu} ./kakadu-sdk
 WORKDIR ${_workroot}/kakadu-sdk/make
 RUN make -f Makefile-Linux-x86-64-gcc clean
 RUN make -f Makefile-Linux-x86-64-gcc all_but_jni
