@@ -12,7 +12,7 @@ path_to_kdu_compress_executable_default = 'kdu_compress'
 #path_to_kdu_compress_executable_default = '/mnt/c/data/consulting/tech/kakadu/kakadu_8.3/v8_3-00462N/bin/Linux-x86-64-gcc/kdu_compress'
 compressed_file_extension_default = ".jph"
 encoding_parameter_set_default = 6
-smallest_thumbnail_dimension_default = 90
+smallest_thumbnail_dimension_default = 50
 
 parser = argparse.ArgumentParser(description="creates bash script to convert TIF files into JPEG2000 files using kdu_compress commands")
 parser.add_argument('--source_directory',
@@ -85,11 +85,11 @@ for codeblock_parameter in codeblock_parameters:
   elif encoding_parameter_set == 4:
     # HT digital bodelian - lossless - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
     encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT -rate -"
-    test_label_prefix="htj2k_digital_bodelian_lossy_codeblock"
+    test_label_prefix="htj2k_digital_bodelian_lossless_codeblock"
   elif encoding_parameter_set == 5:
     # HT digital bodelian - lossy - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
     encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Cmodes=HT Cplex=\"{6,EST,0.25,-1}\" -rate 3"
-    test_label_prefix="htj2k_digital_bodelian_lossless_codeblock"
+    test_label_prefix="htj2k_digital_bodelian_lossy_codeblock"
   elif encoding_parameter_set == 6:
     # HT lossless with PLT
     encoding_parameters="Cmodes=HT Creversible=yes ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
@@ -112,6 +112,15 @@ for codeblock_parameter in codeblock_parameters:
     encoding_parameters="Creversible=no -rate 3 Corder=RPCL Cprecincts=\"{256,256}\" ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
     test_label_prefix="j2k1_lossy_3bpp_plt_codeblock"
     output_file_extension = '.jp2'
+  elif encoding_parameter_set == 11:
+    # j2k1 lossy Qfactor 90 bpp with PLT
+    encoding_parameters="Creversible=no Qfactor=90 Corder=RPCL Cprecincts=\"{256,256}\" ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
+    test_label_prefix="j2k1_lossy_Qfactor_90_plt_codeblock"
+    output_file_extension = '.jp2'
+  elif encoding_parameter_set == 12:
+    # HT lossy Qfactor 90 with PLT
+    encoding_parameters="Cmodes=HT Creversible=no Qfactor=90 ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
+    test_label_prefix="htj2k_lossy_Qfactor_90_plt_codeblock"
   else:
     print( "encoding_parameter_set = '" + str(encoding_parameter_set) + "' is not supported yet, exiting" )
     exit( -1 )
