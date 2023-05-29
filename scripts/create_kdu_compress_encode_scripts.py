@@ -117,10 +117,6 @@ for codeblock_parameter in codeblock_parameters:
     encoding_parameters="Creversible=no Qfactor=90 Corder=RPCL Cprecincts=\"{256,256}\" ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
     test_label_prefix="j2k1_lossy_Qfactor_90_plt_codeblock"
     output_file_extension = '.jp2'
-  elif encoding_parameter_set == 12:
-    # HT lossy Qfactor 90 with PLT
-    encoding_parameters="Cmodes=HT Creversible=no Qfactor=90 ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
-    test_label_prefix="htj2k_lossy_Qfactor_90_plt_codeblock"
   else:
     print( "encoding_parameter_set = '" + str(encoding_parameter_set) + "' is not supported yet, exiting" )
     exit( -1 )
