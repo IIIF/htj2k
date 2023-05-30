@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/htj2k_lossless_codeblock_64,64/","../resources/iiif_urls/full.txt","2",31.22665,31.24592,31.18476,31.04695,30.90571,155.63278

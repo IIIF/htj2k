@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/htj2k_lossless_plt_codeblock_64,64/","../resources/iiif_urls/mirador_urls.txt","1",13.69893,13.62927,13.52570,13.65856,13.70941,68.26252

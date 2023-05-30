@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/j2k1_digital_bodelian_lossless_codeblock_64,64/","../resources/iiif_urls/500.txt","16",1.66073,1.65980,1.69363,1.68326,1.66796,8.38935

@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/htj2k_lossy_3bpp_plt_codeblock_64,64/","../resources/iiif_urls/1024.txt","2",.69943,.70107,.69890,.69952,.69865,3.52059
