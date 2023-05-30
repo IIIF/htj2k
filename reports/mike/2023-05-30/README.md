@@ -22,6 +22,6 @@
 ![iiif_urls.txt](plots/2023-05-29-decoding.iiif_urls.txt.decoding_time_in_seconds.png)
 ![iiif_urls_unique.txt](plots/2023-05-29-decoding.iiif_urls_unique.txt.decoding_time_in_seconds.png)
 
-## real-human generated requests during an actual browsing session
+## requests generated during an actual browsing session by a normal real human being
 ![mirador_urls.txt](plots/2023-05-29-decoding.mirador_urls.txt.decoding_time_in_seconds.png)
 ![uv_urls.txt](plots/2023-05-29-decoding.uv_urls.txt.decoding_time_in_seconds.png)
