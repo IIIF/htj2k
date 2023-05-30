@@ -1,5 +1,6 @@
 
 from locust import HttpUser, task, events
+import json
 
 locations = {
     'ptiff-lossy-round1': {
@@ -75,6 +76,7 @@ def _(parser):
     parser.add_argument("--url-list", type=str, env_var="URL_LIST", default="", help="File of IIIF URLs")
     parser.add_argument("--limit", type=int, env_var="LIMIT", default="-1", help="Limit the number of URLs to test")
     parser.add_argument("--mode", type=str, env_var="MODE", default="aggregate", help="Either full or aggregate")
+    parser.add_argument("--locations", type=str, env_var="locations", default=None, help="Path to json file containing images")
    
 @events.test_start.add_listener
 def on_test_start(environment, **kwargs):
@@ -94,13 +96,17 @@ def on_test_start(environment, **kwargs):
                 print ('Breaking as {} is greater or equal to {}'.format(count, limit))
                 break
 
-
+   
 
 class IIIFURLTester(HttpUser):
 
     @task
     def getURLs(self):
-        print (urls)
+        if self.environment.parsed_options.locations:            
+            with open(self.environment.parsed_options.locations, 'r') as fh:
+                print (f'Loading {self.environment.parsed_options.locations}')
+                locations = json.load(fh)        
+                print (locations)
         for urlInfo in urls:
             for imgType, details in locations.items():
                 url = "/iiif/{}/{}.{}/{}".format(details['loc'], urlInfo['id'], details['ext'], urlInfo['params'])
@@ -115,4 +121,4 @@ class IIIFURLTester(HttpUser):
 
         print ('finished tests')
         self.environment.runner.quit()        
-        print ('Quiting')
+        print ('Quitting')
