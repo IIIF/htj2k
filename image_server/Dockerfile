@@ -7,7 +7,8 @@ ENV _workroot /usr/local/src
 # iipsrv version to use (for release build).
 ENV _iipsrv_version 1.1
 # iipsrv commit to use (for trunk build).
-ENV _iipsrv_commit f57b41b06ee536b6ff3aba095884107d3ffea139
+ENV _iipsrv_commit a9149d80ad561d79f9d9cf0a5ac9ef1cc03ff8c7 
+# 27-05-2023: a9149d80ad561d79f9d9cf0a5ac9ef1cc03ff8c7
 # Glen tests originally done on 337aa85f46866255c27b835d69e30e562662cc72
 
 RUN apt update
