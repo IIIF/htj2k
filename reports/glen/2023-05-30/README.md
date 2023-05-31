@@ -6,6 +6,31 @@ This testing round is to test different parameters for creating jp2s to see what
 
 Re-using the files generated in [2023-05-29](../2023-05-29/README.md#generating-the-jp2s-and-htj2k-jp2s)
 
+File sizes:
+
+```
+# jp2 sizes:
+1.9G	../../../imgs/50/params2/htj2k_lossy_3bpp_plt_codeblock_64,64
+1.1G	../../../imgs/50/params2/j2k1_lossy_Qfactor_90_plt_codeblock_64,64
+1.2G	../../../imgs/50/params2/htj2k_lossy_Qfactor_90_codeblock_64,64
+6.5G	../../../imgs/50/params2/j2k1_lossless_plt_codeblock_64,64
+6.7G	../../../imgs/50/params2/htj2k_digital_bodelian_lossless_codeblock_64,64
+6.5G	../../../imgs/50/params2/j2k1_digital_bodelian_lossless_codeblock_64,64
+1.9G	../../../imgs/50/params2/htj2k_digital_bodelian_lossy_codeblock_64,64
+6.7G	../../../imgs/50/params2/htj2k_lossless_plt_codeblock_64,64
+6.7G	../../../imgs/50/params2/htj2k_lossless_codeblock_64,64
+1.9G	../../../imgs/50/params2/j2k1_digital_bodelian_lossy_codeblock_64,64
+1.9G	../../../imgs/50/params2/j2k1_lossy_3bpp_plt_codeblock_64,64
+1.2G	../../../imgs/50/params2/htj2k_lossy_Qfactor_90_plt_codeblock_64,64
+
+# ptiff sizes:
+5.7G	../../../imgs/50/ptiff/lossy
+12G	../../../imgs/50/ptiff/lossless
+
+# Original Tiff files:
+15G	../../../imgs/50/original/
+```
+
 ## Running tests
 
 Starting docker (with new param for kakadu location):
