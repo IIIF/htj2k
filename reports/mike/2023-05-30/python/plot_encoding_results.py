@@ -7,8 +7,10 @@ import numpy as np
 import matplotlib.pyplot as plt
     
 #directory_with_csv_files_default = r'.\logs\2023-05-28-encoding'
-directory_with_csv_files_default = ".\\logs\\2023-05-28-encoding"
+#directory_with_csv_files_default = ".\\logs\\2023-05-28-encoding"
 #directory_with_csv_files_default = "./logs/2023-05-28-encoding"
+#directory_with_csv_files_default = ".\\logs\\2023-05-30-encoding"
+directory_with_csv_files_default = ".\\logs\\2023-05-30-encoding-v2"
 
 parser = argparse.ArgumentParser(description="create encoding performance plots")
 parser.add_argument("--input_directory", 
@@ -66,6 +68,12 @@ for search_result in search_results:
   if( len(words) == 1 ):
     words = output_directory_full.split('\\')
   output_directory_value = words[-1]
+
+  # fix spelling typo if it exists
+  # change bodelian to bodleian
+  if( output_directory_value.find("bodelian") >= 0) :
+    output_directory_value = output_directory_value.replace("bodelian", "bodleian")
+  
   encode_time_in_seconds_value = search_result_values_array[0][1]
   compressed_size_in_bytes_value = search_result_values_array[0][2]
 

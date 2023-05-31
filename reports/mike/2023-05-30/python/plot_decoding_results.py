@@ -68,6 +68,11 @@ for search_result in search_results:
     words = iiif_url_full.split('\\')
   iiif_url = words[-1]
 
+  # fix spelling typo if it exists
+  # change bodelian to bodleian
+  if( compressed_directory.find("bodelian") >= 0) :
+    compressed_directory = compressed_directory.replace("bodelian", "bodleian")
+
   all_values_array[search_index][0] = compressed_directory
   all_values_array[search_index][1] = iiif_url #search_result_values_array[0][1] # iiif_urls_filename
   all_values_array[search_index][2] = search_result_values_array[0][2] # number_of_decoding_threads

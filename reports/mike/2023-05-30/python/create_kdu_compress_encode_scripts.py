@@ -124,7 +124,8 @@ for codeblock_parameter in codeblock_parameters:
     Clevels_parameter_default = 6
   elif encoding_parameter_set == 4:
     # HT digital bodelian - lossless - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
-    encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT -rate -"
+    #encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT -rate -"
+    encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT"
     test_label_prefix="htj2k_digital_bodelian_lossless_codeblock"
     compressed_file_extension_default=".jph"
     args.is_Clevels_image_size_dependent = False
