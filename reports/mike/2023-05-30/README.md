@@ -46,6 +46,6 @@ The fastest threading configuration is noted with text t=1, t=2, t=4, t=8, or t=
 - PLT helps speed up spatial random access decoding
 
 # Encoding results
-![Compressed Size](plots/2023-05-30-encoding-v2.compressed_size_in_gigabytes.png)
+![Compressed Size](plots/2023-05-31-encoding-v2.compressed_size_in_gigabytes.png)
 
-![Encoding Time](plots/2023-05-30-encoding-v2.encoding_time_in_seconds.png)
+![Encoding Time](plots/2023-05-31-encoding-v2.encoding_time_in_seconds.png)
