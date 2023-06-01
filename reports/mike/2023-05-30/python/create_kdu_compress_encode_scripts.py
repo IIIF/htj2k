@@ -125,7 +125,8 @@ for codeblock_parameter in codeblock_parameters:
   elif encoding_parameter_set == 4:
     # HT digital bodelian - lossless - https://image-processing.readthedocs.io/en/latest/jp2_profile.html#kduusage
     #encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT -rate -"
-    encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT"
+    #encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes -flush_period 1024 Creversible=yes Cmodes=HT"
+    encoding_parameters="\"Cprecincts={256,256},{256,256},{128,128}\" \"Stiles={512,512}\" Corder=RPCL ORGgen_plt=yes ORGtparts=R \"Cblk={64,64}\" Cuse_sop=yes Cuse_eph=yes Creversible=yes Cmodes=HT"
     test_label_prefix="htj2k_digital_bodelian_lossless_codeblock"
     compressed_file_extension_default=".jph"
     args.is_Clevels_image_size_dependent = False
@@ -172,6 +173,16 @@ for codeblock_parameter in codeblock_parameters:
     encoding_parameters="Cmodes=HT Creversible=no Qfactor=90 ORGgen_plt=yes Cblk=\"{" + codeblock_parameter + "}\""
     test_label_prefix="htj2k_lossy_Qfactor_90_plt_codeblock"
     compressed_file_extension_default=".jph"
+  elif encoding_parameter_set == 13:
+    # Pyramid TIFF lossless
+    encoding_parameters="--compression deflate --tile --pyramid --tile-width 256 --tile-height 256"
+    test_label_prefix="ptiff_lossless_deflate_256,256"
+    compressed_file_extension_default=".tif"
+  elif encoding_parameter_set == 14:
+    # Pyramid TIFF lossy
+    encoding_parameters="--compression jpeg --Q 90 --tile --pyramid --tile-width 256 --tile-height 256"
+    test_label_prefix="ptiff_lossy_jpeg_Q90_256,256"
+    compressed_file_extension_default=".tif"
   else:
     print( "encoding_parameter_set = " + str(encoding_parameter_set) + " is not supported yet, exiting" )
     exit( -1 )
@@ -226,38 +237,41 @@ for codeblock_parameter in codeblock_parameters:
       input_filename = source_directory + "/" + source_file
       output_filename = output_directory + "/" + basename + output_file_extension
 
-      if( True == args.is_Clevels_image_size_dependent ):
-        # use image magick to get input image width and image height - use [0] to get only the first image in a multi-directory tif
-        cmd = "identify -ping -quiet -format \"%w\" " + input_filename + "[0]"
-        image_width = int(subprocess.check_output(cmd, shell=True))
-        #image_width = int(subprocess.run(cmd, check=False))
-        cmd = "identify -ping -quiet -format \"%h\" " + input_filename + "[0]"
-        image_height = int(subprocess.check_output(cmd, shell=True))
-        #image_height = int(subprocess.run(cmd, shell=True, check=False))
-        #output_script_file.write("printf \"" + return_value + "\n\"")
-        if ( image_width > image_height ) :
-          max_dimension = image_width
-        else:
-          max_dimension = image_height
-        maxmium_scaling_factor = max_dimension / smallest_thumbnail_dimension
-        log2_max_scaling_factor = math.log2( maxmium_scaling_factor )
-        #Clevels_parameter = int(math.ceil( log2_max_scaling_factor + 1))
-        Clevels_parameter = int(math.ceil( log2_max_scaling_factor))
-        # debug info if we find a huge image
-        if( Clevels_parameter > 8 ) :
-          print( "image filename = " + source_file)
-          print( "image_width,image_height = " + str(image_width) + "," + str(image_height))
-          print( "max_dimension = " + str(max_dimension) )
-          print( "log2_max_scaling_factor = " + str(log2_max_scaling_factor) )
-          print( "Clevels_parameter = " + str(Clevels_parameter) )
+      if (output_file_extension == ".tif"):
+        output_script_file.write("vips tiffsave " + input_filename + " " + output_filename + " " + encoding_parameters + "\n")
       else:
-        Clevels_parameter = Clevels_parameter_default
+        if( True == args.is_Clevels_image_size_dependent ):
+          # use image magick to get input image width and image height - use [0] to get only the first image in a multi-directory tif
+          cmd = "identify -ping -quiet -format \"%w\" " + input_filename + "[0]"
+          image_width = int(subprocess.check_output(cmd, shell=True))
+          #image_width = int(subprocess.run(cmd, check=False))
+          cmd = "identify -ping -quiet -format \"%h\" " + input_filename + "[0]"
+          image_height = int(subprocess.check_output(cmd, shell=True))
+          #image_height = int(subprocess.run(cmd, shell=True, check=False))
+          #output_script_file.write("printf \"" + return_value + "\n\"")
+          if ( image_width > image_height ) :
+            max_dimension = image_width
+          else:
+            max_dimension = image_height
+          maxmium_scaling_factor = max_dimension / smallest_thumbnail_dimension
+          log2_max_scaling_factor = math.log2( maxmium_scaling_factor )
+          #Clevels_parameter = int(math.ceil( log2_max_scaling_factor + 1))
+          Clevels_parameter = int(math.ceil( log2_max_scaling_factor))
+          # debug info if we find a huge image
+          if( Clevels_parameter > 8 ) :
+            print( "image filename = " + source_file)
+            print( "image_width,image_height = " + str(image_width) + "," + str(image_height))
+            print( "max_dimension = " + str(max_dimension) )
+            print( "log2_max_scaling_factor = " + str(log2_max_scaling_factor) )
+            print( "Clevels_parameter = " + str(Clevels_parameter) )
+        else:
+          Clevels_parameter = Clevels_parameter_default
 
-      kdu_compress_complete_parameters_without_i_and_o = encoding_parameters + " Clevels=" + str(Clevels_parameter)
-      kdu_compress_command = path_to_kdu_compress_executable + " -i " + input_filename + " -o " + output_filename + " " + kdu_compress_complete_parameters_without_i_and_o
-      # create kdu_compress command and include the command itself in a com marker
-      kdu_compress_command_for_com_marker = "\"" + "kdu_compress " +  kdu_compress_complete_parameters_without_i_and_o.replace("\"", "\\\"" ) + "\""
-      output_script_file.write(kdu_compress_command + " -com " + kdu_compress_command_for_com_marker + "\n")
+        kdu_compress_complete_parameters_without_i_and_o = encoding_parameters + " Clevels=" + str(Clevels_parameter)
+        kdu_compress_command = path_to_kdu_compress_executable + " -i " + input_filename + " -o " + output_filename + " " + kdu_compress_complete_parameters_without_i_and_o
+        # create kdu_compress command and include the command itself in a com marker
+        kdu_compress_command_for_com_marker = "\"" + "kdu_compress " +  kdu_compress_complete_parameters_without_i_and_o.replace("\"", "\\\"" ) + "\""
+        output_script_file.write(kdu_compress_command + " -com " + kdu_compress_command_for_com_marker + "\n")
 
   # stop timer
   output_script_file.write("# stop timer\n")

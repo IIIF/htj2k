@@ -10,7 +10,9 @@ import matplotlib.pyplot as plt
 #directory_with_csv_files_default = ".\\logs\\2023-05-28-encoding"
 #directory_with_csv_files_default = "./logs/2023-05-28-encoding"
 #directory_with_csv_files_default = ".\\logs\\2023-05-30-encoding"
-directory_with_csv_files_default = ".\\logs\\2023-05-30-encoding-v2"
+#directory_with_csv_files_default = ".\\logs\\2023-05-30-encoding-v2"
+#directory_with_csv_files_default = ".\\logs\\2023-05-31-encoding"
+directory_with_csv_files_default = ".\\logs\\2023-05-31-encoding-v2"
 
 parser = argparse.ArgumentParser(description="create encoding performance plots")
 parser.add_argument("--input_directory", 
