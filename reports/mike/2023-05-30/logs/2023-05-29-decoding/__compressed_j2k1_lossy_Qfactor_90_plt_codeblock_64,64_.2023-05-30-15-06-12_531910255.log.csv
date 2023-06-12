@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/j2k1_lossy_Qfactor_90_plt_codeblock_64,64/","../resources/iiif_urls/1000.txt","2",7.07421,7.07206,7.07166,7.06746,7.09808,35.40668

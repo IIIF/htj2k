@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/htj2k_lossy_Qfactor_90_codeblock_64,64/","../resources/iiif_urls/custom_region-100-100-2000-2000.txt","2",1.62491,1.56940,1.59502,1.57943,1.60538,7.99740

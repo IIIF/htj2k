@@ -1,0 +1,2 @@
+compressed_directory,iiif_urls_filename,number_of_decoding_threads,1,2,3,4,5,total_decoding_time_in_seconds
+"../../compressed/j2k1_lossless_plt_codeblock_64,64/","../resources/iiif_urls/custom_region-100-100-200-200.txt","1",2.51332,2.13031,2.12599,2.11745,2.11749,11.02816

@@ -1,0 +1,17 @@
+#!/bin/bash
+set -u
+set -e
+bash encode_htj2k_digital_bodelian_lossless_codeblock_64,64.sh
+bash encode_htj2k_digital_bodelian_lossy_codeblock_64,64.sh
+bash encode_htj2k_lossless_codeblock_64,64.sh
+bash encode_htj2k_lossless_plt_codeblock_64,64.sh
+bash encode_htj2k_lossy_3bpp_plt_codeblock_64,64.sh
+bash encode_htj2k_lossy_Qfactor_90_codeblock_64,64.sh
+bash encode_htj2k_lossy_Qfactor_90_plt_codeblock_64,64.sh
+bash encode_j2k1_digital_bodelian_lossless_codeblock_64,64.sh
+bash encode_j2k1_digital_bodelian_lossy_codeblock_64,64.sh
+bash encode_j2k1_lossless_plt_codeblock_64,64.sh
+bash encode_j2k1_lossy_3bpp_plt_codeblock_64,64.sh
+bash encode_j2k1_lossy_Qfactor_90_plt_codeblock_64,64.sh
+bash encode_ptiff_lossless_deflate_256,256_64,64.sh
+bash encode_ptiff_lossy_jpeg_Q90_256,256_64,64.sh
